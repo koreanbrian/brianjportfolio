@@ -1,58 +1,49 @@
 @font-face {
   font-family: "NatoSansKR";
-  src: url("https://incento-standalone.s3.ap-northeast-2.amazonaws.com/standalone/fonts//NotoSansKR-Regular.otf")
-    format("opentype");
+  src: url("./NotoSansKR-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "NatoSansKR";
-  src: url("https://incento-standalone.s3.ap-northeast-2.amazonaws.com/standalone/fonts//NotoSansKR-Light.otf")
-    format("opentype");
+  src: url("./NotoSansKR-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "NatoSansKR";
-  src: url("https://incento-standalone.s3.ap-northeast-2.amazonaws.com/standalone/fonts//NotoSansKR-Bold.otf")
-    format("opentype");
+  src: url("./NotoSansKR-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 } /*# sourceMappingURL=fonts.css.map */
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("https://incento-standalone.s3.ap-northeast-2.amazonaws.com/standalone/fonts//SpoqaHanSansNeo-Thin.otf")
-    format("opentype");
+  src: url("./SpoqaHanSansNeo-Thin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("https://incento-standalone.s3.ap-northeast-2.amazonaws.com/standalone/fonts//SpoqaHanSansNeo-Light.otf")
-    format("opentype");
+  src: url("./SpoqaHanSansNeo-Light.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("https://incento-standalone.s3.ap-northeast-2.amazonaws.com/standalone/fonts//SpoqaHanSansNeo-Regular.otf")
-    format("opentype");
+  src: url("./SpoqaHanSansNeo-Regular.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("https://incento-standalone.s3.ap-northeast-2.amazonaws.com/standalone/fonts//SpoqaHanSansNeo-Medium.otf")
-    format("opentype");
+  src: url("./SpoqaHanSansNeo-Medium.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "SpoqaHanSansNeo";
-  src: url("https://incento-standalone.s3.ap-northeast-2.amazonaws.com/standalone/fonts//SpoqaHanSansNeo-Bold.otf")
-    format("opentype");
+  src: url("./SpoqaHanSansNeo-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }

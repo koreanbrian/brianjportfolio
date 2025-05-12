@@ -1,2 +1,4 @@
 /node_modules
 /.next
+next.config.mjs
+next-env.d.ts
