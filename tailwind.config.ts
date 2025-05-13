@@ -15,9 +15,9 @@ const config: Config = {
       fontFamily: {
         serif: ["Merriweather", "serif"],
         mono: ["Menlo", "monospace"],
-        sans: ["Spoqa Han Sans Neo", "NatoSansKR", "sans-serif"],
+        sans: ["Spoqa Han Sans Neo", "sans-serif"],
         noto: ['"Noto Sans KR"', "sans-serif"],
-        spoqa: ['"Spoqa Han Sans Neo"', "sans-serif"],
+        spoqa: ["Spoqa Han Sans Neo", "sans-serif"],
       },
       //let's see
     },

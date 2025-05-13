@@ -30,12 +30,12 @@ export default function Intro() {
             <img className="rounded-lg" width="200" src="/img/metamong.png" />
             {/* <img className="rounded-lg" width="200" src="/img/BrianProfilePhoto.jpg" /> */}
           </div>
-          <div className="w-fit min-w-[350px] flex flex-col items-center justify-center gap-[20px]">
+          <div className="w-fit max-w-[360px] flex flex-col items-center justify-center gap-[20px]">
             <div className="text-[25px] w-fit lg:w-full font-semibold flex flex-col justify-end">
               <div className="flex gap-[6px]">
                 <span className="h-fit font-normal">안녕하세요,</span>
               </div>
-              <div className="overflow-hidden min-h-[35px]">
+              <div className="overflow-hidden min-h-[35px] max-w-[350px]">
                 <AnimatePresence mode="wait">
                   {!showName ? (
                     <>
@@ -47,22 +47,21 @@ export default function Intro() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.6 }}
-                          className="w-fit flex text-center gap-[12px]"
+                          className="w-fit flex gap-[4px] justify-start"
                         >
                           <div className="flex gap-[4px]">
-                            <span className="font-semibold border-b  border-b-black w-[340px] h-[35px] justify-center text-center flex"></span>
+                            <span className="font-semibold border-b border-b-black w-[300px] h-[35px] justify-start text-center flex "></span>
                           </div>
                         </motion.div>
                       </div>
-                      <span className="font-light w-[60px] text-[25px]">입니다.</span>
+                      <span className="font-light w-[60px] text-[25px] ">입니다.</span>
                     </>
                   ) : (
                     <>
                       <div className="flex gap-[4px]">
                         <span className="font-light w-[60px] h-fit">저는</span>
-                        <div className="w-full flex gap-[4px] justify-center">
-                          {/* <span className="font-semibold"></span> */}
-                          <span className="font-semibold border-b border-b-black w-[340px] h-[35px] justify-center text-center flex">
+                        <div className="w-fit flex gap-[4px] justify-start">
+                          <span className="font-semibold border-b border-b-black w-[300px] h-[35px] justify-center text-center flex">
                             <motion.div
                               key="name"
                               initial={{ opacity: 0, y: 10 }}
@@ -71,13 +70,13 @@ export default function Intro() {
                               transition={{ duration: 0.6 }}
                               className="w-fit flex text-center gap-[12px]"
                             >
-                              <strong>Frontend Engineer</strong>
+                              <strong>프론트엔드 개발자</strong>
                               <span className="font-normal"> 브라이언</span>
                             </motion.div>
                           </span>
                         </div>
                       </div>
-                      <span className="font-light w-[60px] text-[25px]">입니다.</span>
+                      <span className="font-light w-[60px] text-[25px] ">입니다.</span>
                     </>
                   )}
                 </AnimatePresence>
@@ -93,7 +92,7 @@ export default function Intro() {
               </div>
               <div className="flex gap-[12px] w-full">
                 <span className="w-1/2 font-light min-w-[165px]">2009.05 - 2015.08</span>
-                <span className="w-full">호텔 경영학과 학사 졸업</span>
+                <span className="w-full">호텔 경영학과 학사 졸업(일본어 부전공)</span>
               </div>
             </div>
           </div>
