@@ -27,7 +27,7 @@ export default function Projects() {
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div
           ref={ref}
-          className="flex flex-col lg:flex-row h-[calc(100vh-160px)] gap-[20px] items-center justify-center w-full px-[20px]"
+          className="flex flex-col lg:flex-row  min-h-screen gap-[20px] items-center justify-center w-full px-[20px]"
         >
           <div className="w-fit min-w-[350px] flex flex-col items-center justify-center gap-[20px]">
             <div className="text-[25px] w-full font-semibold flex flex-col justify-end">

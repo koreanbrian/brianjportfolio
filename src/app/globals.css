@@ -37,15 +37,16 @@ body {
 }
 
 .scroll-watcher {
-  height: 10px;
+  height: 5px;
   position: fixed;
-  top: 100px;
+  top: 80px;
+  left: 0;
   z-index: 1000;
-  background-color: lime;
+  background-color: limegreen;
   width: 100%;
-  scale: 0 1;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll(y);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.1s linear;
 }
 
 @keyframes scroll-watcher {

@@ -9,15 +9,12 @@ import Career from "@/components/content/Career";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-screen overflow-hidden">
-      <div className="absolute w-full">
+    // <main className="flex flex-col h-screen overflow-hidden">
+    <main className="flex flex-col h-screen overflow-y-auto" id="scroll-container">
+      <div className="fixed top-0 w-full z-50 ">
         <Header />
       </div>
-      <div className="scroll-watcher" />
-      <div
-        className="mt-[100px] mb-[120px] h-[calc(100vh-160px)] overflow-y-auto scroll-snap-y scroll-snap-proximity scroll-smooth scrollbar-hide"
-        id="scroll-container"
-      >
+      <div className=" min-h-screen pt-[80px] overflow-y-auto scroll-snap-y scroll-snap-proximity scroll-smooth scrollbar-hide">
         <section id="home" className="scroll-snap-start h-screen">
           <ScrollFadeSection>
             <Intro />
@@ -44,9 +41,9 @@ export default function Home() {
           </ScrollFadeSection>
         </section>
       </div>
-      <div className="absolute bottom-0 w-full">
-        <Footer />
-      </div>
+      {/* <div className="absolute bottom-0 w-full"> */}
+      <Footer />
+      {/* </div> */}
     </main>
   );
 }

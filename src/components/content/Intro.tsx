@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { div } from "framer-motion/client";
 
 export default function Intro() {
   const ref = useRef<HTMLDivElement>(null);
@@ -23,14 +22,11 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="relative h-full flex flex-col justify-center items-center w-full">
+    <div ref={ref} className="relative h-full flex flex-col justify-center items-center w-full">
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
-        <div
-          ref={ref}
-          className="flex flex-col lg:flex-row h-[calc(100vh-160px)] gap-[20px] items-center justify-center w-full px-[20px]"
-        >
-          <div className="w-[30%] min-w-[250px] flex items-center justify-center transition-all transition-discrete  duration-75">
-            <img className="rounded-lg" width="250" src="/img/BrianProfilePhoto.jpg" />
+        <div className="flex flex-col lg:flex-row  min-h-screen gap-[20px] items-center justify-center w-full px-[20px]">
+          <div className="min-w-[250px] h-full flex items-center justify-center transition-all transition-discrete  duration-75">
+            <img className="rounded-lg" width="200" src="/img/BrianProfilePhoto.jpg" />
           </div>
           <div className="w-fit min-w-[350px] flex flex-col items-center justify-center gap-[20px]">
             <div className="text-[25px] w-fit lg:w-full font-semibold flex flex-col justify-end">

@@ -37,7 +37,7 @@ export default function Skills() {
   return (
     <div ref={ref} className="relative h-full flex flex-col justify-center items-center w-full">
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
-        <div className="flex flex-col h-[calc(100vh-160px)] gap-[20px] items-center justify-center w-full px-[20px]">
+        <div className="flex flex-col  min-h-screen gap-[20px] items-center justify-center w-full px-[20px]">
           <div className="text-[35px] w-full font-semibold">
             <span>Skills</span>
           </div>

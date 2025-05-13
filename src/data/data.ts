@@ -1,0 +1,90 @@
+import { JobDesc } from "./type";
+
+export const careerInfo: JobDesc[] = [
+  {
+    company: "오픈포맷 [인센토]",
+    position: "소프트웨어 엔지니어",
+    startDate: "2024.05",
+    endDate: "현재",
+    taskDesc: [
+      {
+        headTask: "프로젝트 리더십 & 기획",
+        subTask: [
+          "10 명의 다국적 팀원과 함께 Cafe24 리퍼럴 마케팅 플러그인 Incento 의 프론트엔드 & UI/UX 리뉴얼 주도",
+          "Incent 관리자 사이트의 서비스 기획 및 전면 개편 프로젝트 진행하여 사용성과 운영 효율성 개선",
+          "사용자 니즈 기반의 비즈니스 로직 설계 및 서비스 아키텍처 개선",
+        ],
+      },
+      {
+        headTask: "프론트엔드 개발 & UI/UX 개선",
+        subTask: [
+          "디바이스 최적화된 반응형 웹 디자인 구축, 일관된 사용자 경험 제공",
+          "직관적인 대시보드 및 간소화된 워크플로우 설계를 통해 데이터 시각화와 정보 명확성 개선",
+          "TypeScript, Next.js, React 를 활용한 재사용 가능한 컴포넌트 구조 개발, 유지보수 용이 및 개발 속도 향상",
+          "Tailwind CSS 를 사용한 스타일링 최적화 및 일관된 디자인 시스템 적용",
+        ],
+      },
+      {
+        headTask: "데이터 관리 & 배포 인프라 구축",
+        subTask: [
+          "Chart.js, nivo 를 활용한 대시보드 데이터 시각화 구현",
+          "PostgreSQL 을 활용한 데이터 관리 및 AWS S3/CloudFront 기반의 안전한 파일 관리",
+          "Vercel 을 이용한 배포로 안정적이고 확장 가능한 서비스 인프라 구축",
+        ],
+      },
+    ],
+  },
+  {
+    company: "다이얼로그 스페이스",
+    position: "소프트웨어 엔지니어",
+    startDate: "2021.08",
+    endDate: "2024.04",
+    taskDesc: [
+      {
+        headTask: "서비스 개발 & 아키텍처 구축",
+        subTask: [
+          "Spring MVC 및 Tomcat 기반의 웹 서버를 이용해 가상자산 관리 서비스 '크립토택스' 개발",
+          "MySQL, MongoDB 및 MyBatis를 활용한 안정적인 데이터 관리 및 처리",
+          "국내외 주요 가상화폐 거래소 API 연동 및 백엔드 컨트롤러 로직 구현",
+        ],
+      },
+      {
+        headTask: "프론트엔드 개발 & UI 구현",
+        subTask: [
+          "HTML, CSS, JavaScript, jQuery를 활용한 사용자 친화적 뷰 페이지 개발",
+          "i18n을 활용한 다국어 웹사이트 구축 및 한글 사이트 영문 번역",
+        ],
+      },
+      {
+        headTask: "데이터 관리 & 클라우드 인프라",
+        subTask: ["AWS S3/CloudFront를 통한 안전하고 효율적인 파일 저장 및 배포 시스템 운영"],
+      },
+    ],
+  },
+  {
+    company: "스파크펫 [Knollo]",
+    position: "UX 디자이너 & 프론트엔드 개발",
+    startDate: "2020.11",
+    endDate: "2021.08",
+    taskDesc: [
+      {
+        headTask: "UX/UI 디자인 & 기획",
+        subTask: [
+          "Figma를 활용한 모바일 UX/UI 흐름 설계",
+          "반려동물 병원, 호텔, 스토어, 수영장 등 오프라인 서비스의 UX 디자인 맵 및 와이어프레임 개발",
+        ],
+      },
+      {
+        headTask: "웹사이트 개발 & 구현",
+        subTask: [
+          "HTML5, CSS, Spring MVC 기반의 웹사이트 및 예약 시스템 구현",
+          "반응형 UI 설계를 통해 다양한 디바이스에서 최적화된 사용자 경험 제공",
+        ],
+      },
+      {
+        headTask: "데이터 연동 & 시스템 구축",
+        subTask: ["멤버십 데이터를 다양한 서비스와 연동하기 위한 시스템 및 데이터 맵핑 구조 설계 및 구현"],
+      },
+    ],
+  },
+];
