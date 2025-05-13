@@ -54,7 +54,7 @@ export default function Intro() {
                           </div>
                         </motion.div>
                       </div>
-                      <span className="font-normal w-[60px] text-[25px]"> 입니다.</span>
+                      <span className="font-light w-[60px] text-[25px]">입니다.</span>
                     </>
                   ) : (
                     <>
@@ -62,7 +62,7 @@ export default function Intro() {
                         <span className="font-light w-[60px] h-fit">저는</span>
                         <div className="w-full flex gap-[4px] justify-center">
                           {/* <span className="font-semibold"></span> */}
-                          <span className="font-semibold border-b  border-b-black w-[340px] h-[35px] justify-center text-center flex">
+                          <span className="font-semibold border-b border-b-black w-[340px] h-[35px] justify-center text-center flex">
                             <motion.div
                               key="name"
                               initial={{ opacity: 0, y: 10 }}
@@ -77,7 +77,7 @@ export default function Intro() {
                           </span>
                         </div>
                       </div>
-                      <span className="font-light w-[60px] text-[25px]"> 입니다.</span>
+                      <span className="font-light w-[60px] text-[25px]">입니다.</span>
                     </>
                   )}
                 </AnimatePresence>
