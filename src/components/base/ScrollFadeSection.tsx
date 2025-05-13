@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export default function ScrollFadeSection({ children }: { children: React.ReactNode }) {
   const { ref, inView } = useInView({
     threshold: 0,
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const controls = useAnimation();
@@ -16,8 +16,6 @@ export default function ScrollFadeSection({ children }: { children: React.ReactN
     const timeout = setTimeout(() => {
       if (inView) {
         controls.start("visible");
-      } else {
-        controls.start("hidden");
       }
     }, 100);
 
