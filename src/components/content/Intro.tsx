@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { strong } from "framer-motion/client";
 
 export default function Intro() {
   const ref = useRef<HTMLDivElement>(null);

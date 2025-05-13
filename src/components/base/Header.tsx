@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <div className="relative z-50 flex h-[80px] w-full items-end justify-between font-spoqa ">
+    <div className="relative z-50 flex h-[80px] w-full items-end justify-between ">
       <div className=" w-full h-full p-[16px] text-[20px] font-normal flex items-end">Brian Jeong's Portfolio</div>
 
       {/* Desktop Menu */}

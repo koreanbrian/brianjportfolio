@@ -10,7 +10,7 @@ import Career from "@/components/content/Career";
 export default function Home() {
   return (
     // <main className="flex flex-col h-screen overflow-hidden">
-    <main className="flex flex-col h-screen overflow-y-auto" id="scroll-container">
+    <main className="flex flex-col h-screen overflow-y-auto font-spoqa" id="scroll-container">
       <div className="fixed top-0 w-full z-50 ">
         <Header />
       </div>
