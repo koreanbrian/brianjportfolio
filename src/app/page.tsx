@@ -5,6 +5,7 @@ import Header from "@/components/base/Header";
 import Intro from "@/components/content/Intro";
 import Skills from "@/components/content/Skills";
 import Projects from "@/components/content/Projects";
+import Career from "@/components/content/Career";
 
 export default function Home() {
   return (
@@ -30,6 +31,11 @@ export default function Home() {
         <section id="skills" className="scroll-snap-start h-screen ">
           <ScrollFadeSection>
             <Skills />
+          </ScrollFadeSection>
+        </section>
+        <section id="career" className="scroll-snap-start h-screen ">
+          <ScrollFadeSection>
+            <Career />
           </ScrollFadeSection>
         </section>
         <section id="projects" className="scroll-snap-start h-screen ">

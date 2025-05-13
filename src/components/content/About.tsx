@@ -25,7 +25,7 @@ export default function About() {
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div className="flex flex-col h-[calc(100vh-160px)] gap-[20px] items-center justify-center w-full px-[20px]">
           <motion.div
-            key="wholeParagraph"
+            key="subject"
             initial={{ opacity: 0, y: 10 }}
             animate={visible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}

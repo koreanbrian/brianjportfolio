@@ -16,8 +16,8 @@ export default function Header() {
     }
   };
   return (
-    <div className="flex h-[80px] w-full items-end justify-between ">
-      <div className="w-full h-full p-[16px] text-[24px] font-semibold flex items-end">Brian Jeong's Portfolio</div>
+    <div className="flex h-[80px] w-full items-end justify-between font-spoqa">
+      <div className=" w-full h-full p-[16px] text-[20px] font-normal flex items-end">Brian Jeong's Portfolio</div>
       <div className="flex h-full items-end justify-end gap-[12px] p-[16px] font-semibold">
         <div className={menuSelect} onClick={() => scrollToSection("home")}>
           Intro
@@ -28,11 +28,11 @@ export default function Header() {
         <div className={menuSelect} onClick={() => scrollToSection("skills")}>
           Skills
         </div>
-        <div className={menuSelect} onClick={() => scrollToSection("projects")}>
-          Projects
-        </div>
         <div className={menuSelect} onClick={() => scrollToSection("career")}>
           Career
+        </div>
+        <div className={menuSelect} onClick={() => scrollToSection("projects")}>
+          Projects
         </div>
       </div>
     </div>
