@@ -14,7 +14,7 @@ export default function Home() {
       <div className="fixed top-0 w-full z-50 ">
         <Header />
       </div>
-      <div className=" min-h-screen pt-[80px] overflow-y-auto scroll-snap-y scroll-snap-proximity scroll-smooth scrollbar-hide">
+      <div className=" min-h-screen overflow-y-auto scroll-snap-y scroll-snap-proximity scroll-smooth scrollbar-hide">
         <section id="home" className="scroll-snap-start h-screen">
           <ScrollFadeSection>
             <Intro />
@@ -31,6 +31,7 @@ export default function Home() {
           </ScrollFadeSection>
         </section>
         <section id="career" className="scroll-snap-start h-screen ">
+          <div className="w-full h-[80px]" />
           <ScrollFadeSection>
             <Career />
           </ScrollFadeSection>

@@ -30,6 +30,7 @@ export default function Career() {
 
   return (
     <div className="relative h-full flex flex-col justify-center items-center w-full">
+      <div className="w-full h-[80px]" />
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div
           ref={ref}
