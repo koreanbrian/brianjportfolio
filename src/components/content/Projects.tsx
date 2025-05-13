@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { div } from "framer-motion/client";
 
-export default function Intro() {
+export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [showName, setShowName] = useState(false);
@@ -33,7 +32,7 @@ export default function Intro() {
             <img className="rounded-lg" width="250" src="/img/BrianProfilePhoto.jpg" />
           </div>
           <div className="w-fit min-w-[350px] flex flex-col items-center justify-center gap-[20px]">
-            <div className="text-[25px] w-fit lg:w-full font-semibold flex flex-col justify-end">
+            <div className="text-[25px] w-full font-semibold flex flex-col justify-end">
               <div className="flex gap-[6px]">
                 <span className="h-fit">안녕하세요,</span>
                 <span className="font-light w-[60px] h-fit">저는 </span>
