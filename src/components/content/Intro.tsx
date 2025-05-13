@@ -83,9 +83,8 @@ export default function Intro() {
               </div>
             </div>
             <div className="text-[18px] flex flex-col w-full text-gray-700">
-              <span className="w-full font-semibold">
-                University of Nevada, Las Vegas <br />
-              </span>
+              <span className="w-full font-semibold">University of Nevada, Las Vegas</span>
+              <span className="w-full font-light text-[16px]">네바다 주립대학교, 라스베가스 캠퍼스</span>
               <div className="flex gap-[12px] w-full">
                 <span className="w-1/2 font-light min-w-[165px]">2016.08 - 2020.05</span>
                 <span className="w-full">컴퓨터 공학 학사 졸업</span>

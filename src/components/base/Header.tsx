@@ -1,10 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useScrollSpy } from "./UseScrollSpy";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState("home");
+  const menuIds = ["home", "about", "skills", "career", "projects"];
+  const currentSection = useScrollSpy(menuIds, 80); // 80px header offset
   const menuSelect: string =
     "h-[25px] w-[80px] cursor-pointer font-light text-center hover:text-gray-400 hover:border-b-2 hover:border-b-gray-400 ";
   const scrollToSection = (id: string) => {
@@ -22,36 +25,15 @@ export default function Header() {
 
       {/* Desktop Menu */}
       <nav className="hidden lg:flex h-full items-end justify-end gap-[12px] p-[16px] font-semibold">
-        <div
-          className={`${selectedMenu === "home" ? "font-semibold " : ""}${menuSelect}`}
-          onClick={() => scrollToSection("home")}
-        >
-          Intro
-        </div>
-        <div
-          className={`${selectedMenu === "about" ? "font-semibold " : ""}${menuSelect}`}
-          onClick={() => scrollToSection("about")}
-        >
-          About
-        </div>
-        <div
-          className={`${selectedMenu === "skills" ? "font-semibold " : ""}${menuSelect}`}
-          onClick={() => scrollToSection("skills")}
-        >
-          Skills
-        </div>
-        <div
-          className={`${selectedMenu === "career" ? "font-semibold " : ""}${menuSelect}`}
-          onClick={() => scrollToSection("career")}
-        >
-          Career
-        </div>
-        <div
-          className={`${selectedMenu === "projects" ? "font-semibold " : ""}${menuSelect}`}
-          onClick={() => scrollToSection("projects")}
-        >
-          Projects
-        </div>
+        {menuIds.map((id) => (
+          <div
+            key={id}
+            className={`${currentSection === id ? "font-semibold" : ""} ${menuSelect}`}
+            onClick={() => scrollToSection(id)}
+          >
+            {id.charAt(0).toUpperCase() + id.slice(1)}
+          </div>
+        ))}
       </nav>
       <div className={"wfull scroll-watcher"}></div>
       {/* Burger Button (Mobile Only) */}
@@ -77,8 +59,12 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-[80px] left-0 w-full bg-white shadow-md lg:hidden flex flex-col items-center gap-4 p-4">
-          {["home", "about", "skills", "career", "projects"].map((id) => (
-            <div key={id} className={menuSelect} onClick={() => scrollToSection(id)}>
+          {menuIds.map((id) => (
+            <div
+              key={id}
+              className={`${currentSection === id ? "font-semibold" : ""} ${menuSelect}`}
+              onClick={() => scrollToSection(id)}
+            >
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </div>
           ))}
