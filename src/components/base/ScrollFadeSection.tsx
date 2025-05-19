@@ -14,17 +14,19 @@ export default function ScrollFadeSection({
   isLast?: boolean;
 }) {
   const { ref, inView } = useInView({
-    threshold: 0.5,
-    rootMargin: isFirst ? "0px 0px -20% 0px" : isLast ? "-20% 0px 0px 0px" : "-40% 0px 0px 0px",
+    threshold: 0.1,
+    rootMargin: "0px 0px 0px 0px", // 또는 아예 삭제
+
+    // rootMargin: isFirst ? "0px 0px -20% 0px" : isLast ? "-20% 0px 0px 0px" : "-40% 0px 0px 0px",
     triggerOnce: true,
   });
   const controls = useAnimation();
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-    // inView ? controls.start("visible") : controls.start("hidden");
+    // if (inView) {
+    //   controls.start("visible");
+    // }
+    inView ? controls.start("visible") : controls.start("hidden");
   }, [inView, controls]);
 
   return (

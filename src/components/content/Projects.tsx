@@ -9,7 +9,6 @@ export default function Projects() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
-  const [showName, setShowName] = useState(false);
   useEffect(() => {
     const element = scrollRef.current;
     if (!element) return;
@@ -45,9 +44,6 @@ export default function Projects() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          setTimeout(() => setShowName(true), 2000);
-        } else {
-          setShowName(false);
         }
       },
       {
@@ -78,7 +74,7 @@ export default function Projects() {
                 <span>Projects</span>
               </motion.div>
             </div>
-            <div className="flex w-full gap-[16px] h-[calc(100vh-200px)]">
+            <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-[16px] py-[20px] -mx-[12px]">
               {projectInfo.map((project: ProjectDesc, index: number) => (
                 <motion.div
                   key={`project-${index}`}
@@ -86,9 +82,8 @@ export default function Projects() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.4 * index }}
-                  className="w-full max-w-[450px] flex-shrink-0 snap-start h-full border rounded-lg bg-white"
+                  className="flex-shrink-0 snap-start w-[90vw] md:w-[450px] h-[calc(100vh-200px)] rounded-lg border bg-white box-border p-[12px] flex flex-col overflow-hidden"
                 >
-                  {/* <div className="p-[12px] w-full h-full overflow-y-auto flex flex-col gap-[8px]"> */}
                   <div className="box-border p-[12px] w-full h-full overflow-y-auto flex flex-col gap-[8px]">
                     <div className="w-fit flex flex-col gap-[4px]">
                       <div className="subject w-fit flex text-[20px] bg-gray-100 rounded-md p-[4px]">
@@ -132,7 +127,6 @@ export default function Projects() {
                               <span className="block font-bold text-[16px]">{task.headTask}</span>
                               <span className="font-bold">주요 기능: </span>
                               <span className="font-normal">{task.mainPoint}</span>
-                              {/* <ul className="list-disc list-inside ml-4 mt-1 space-y-1 w-fit"> */}
                               <ul className="list-disc list-inside ml-4 mt-1 space-y-1 inline-block max-w-[90%] break-words">
                                 {task.subTask.map((sub, sIndex) => (
                                   <li key={`sub-${index}-${tIndex}-${sIndex}`}>{sub}</li>

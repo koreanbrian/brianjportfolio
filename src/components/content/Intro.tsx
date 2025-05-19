@@ -6,13 +6,11 @@ import { div } from "framer-motion/client";
 
 export default function Intro() {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
   const [showName, setShowName] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        setVisible(true);
         setTimeout(() => setShowName(true), 2000);
       } else {
         setShowName(false);

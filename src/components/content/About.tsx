@@ -6,16 +6,20 @@ import { useEffect, useRef, useState } from "react";
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const hasShown = useRef(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasShown.current) {
           setVisible(true);
-        } else {
-          setVisible(false);
+          hasShown.current = true;
         }
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0.7,
+        rootMargin: "0px 0px -20% 0px",
+      }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -25,7 +29,6 @@ export default function About() {
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div className="flex flex-col min-h-screen gap-[20px] items-center justify-center w-full px-[20px]">
           <motion.div
-            key="subject"
             initial={{ opacity: 0, y: 10 }}
             animate={visible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
@@ -53,7 +56,7 @@ export default function About() {
               key="paragrahTwo"
               initial={{ opacity: 0, y: 10 }}
               animate={visible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
               <span className="font-light">
                 <strong>다국적 팀과의 협업 경험</strong>과 <br />
