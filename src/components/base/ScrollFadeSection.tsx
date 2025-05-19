@@ -21,7 +21,10 @@ export default function ScrollFadeSection({
   const controls = useAnimation();
 
   useEffect(() => {
-    inView ? controls.start("visible") : controls.start("hidden");
+    if (inView) {
+      controls.start("visible");
+    }
+    // inView ? controls.start("visible") : controls.start("hidden");
   }, [inView, controls]);
 
   return (

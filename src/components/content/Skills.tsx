@@ -49,7 +49,7 @@ export default function Skills() {
               <span>Skills</span>
             </motion.div>
           </div>
-          <div className="text-[20px] flex flex-col w-full text-gray-700 gap-[20px]">
+          <div className="text-[18px] flex flex-col w-full text-gray-700 gap-[20px]">
             <table>
               <tbody>
                 {tableHead.map((head, index) => (
@@ -65,7 +65,7 @@ export default function Skills() {
                         <span className="font-semibold">{head}</span>
                       </motion.div>
                     </td>
-                    <td className="px-4 py-2">
+                    <td className="p-[8px]">
                       <div className="flex flex-wrap gap-[8px]">
                         {(tableContents[head] || []).map((item, idx) => (
                           <motion.div
@@ -75,7 +75,7 @@ export default function Skills() {
                             transition={{ duration: 0.6, delay: 0.2 * idx }}
                             className="flex flex-wrap gap-[8px]"
                           >
-                            <span key={idx} className="px-2 py-1 bg-gray-200 rounded-md text-sm">
+                            <span key={idx} className="px-[8px] py-[4px] bg-gray-400 rounded-md text-[12px] text-white">
                               {item}
                             </span>
                           </motion.div>

@@ -110,7 +110,7 @@ export default function Projects() {
                       </div>
                     </div>
                     <div className="w-full h-fit flex flex-col mt-[4px] gap-[4px] py-[4px]">
-                      <div className="subject text-[12px] w-full h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
+                      <div className="subject text-[12px] w-fit h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
                         개발 환경
                       </div>
                       <div className="h-fit text-[12px] w-full bg-gray-100 rounded-md p-[8px]">

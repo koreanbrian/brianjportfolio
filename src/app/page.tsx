@@ -14,33 +14,33 @@ export default function Home() {
       <div className="fixed top-0 w-full h-[80px] z-50 ">
         <Header />
       </div>
-      <div
-        id="scroll-container"
-        className="h-[calc(100vh)] overflow-y-auto scroll-snap-y scroll-snap-mandatory scrollbar-hide"
-      >
-        <section className="scroll-snap-start h-[calc(100vh)]">
+      <div id="scroll-container" className="h-full overflow-y-auto scroll-snap-y scroll-snap-mandatory scrollbar-hide">
+        <section className="scroll-snap-start h-full">
           <ScrollFadeSection isFirst={true}>
             <Intro />
           </ScrollFadeSection>
         </section>
-        <section className="scroll-snap-start scroll-snap-always h-[calc(100vh)]">
+        <section className="scroll-snap-start scroll-snap-always h-full bg-gray-100">
           <ScrollFadeSection>
             <About />
           </ScrollFadeSection>
         </section>
-        <section className="scroll-snap-start scroll-snap-always h-[calc(100vh)]">
+
+        <section className="scroll-snap-start h-full">
+          {" "}
+          <ScrollFadeSection isLast={true}>
+            <Projects />
+          </ScrollFadeSection>
+        </section>
+
+        <section className="scroll-snap-start scroll-snap-always h-full bg-gray-100">
           <ScrollFadeSection>
             <Skills />
           </ScrollFadeSection>
         </section>
-        <section className="scroll-snap-start scroll-snap-always h-[calc(100vh)]">
+        <section className="scroll-snap-start scroll-snap-always h-full">
           <ScrollFadeSection>
             <Career />
-          </ScrollFadeSection>
-        </section>
-        <section className="scroll-snap-start scroll-snap-always h-[calc(100vh)] bg-gray-100">
-          <ScrollFadeSection isLast={true}>
-            <Projects />
           </ScrollFadeSection>
         </section>
       </div>
