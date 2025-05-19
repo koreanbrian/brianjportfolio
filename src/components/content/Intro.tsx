@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { div } from "framer-motion/client";
 
 export default function Intro() {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,8 +27,8 @@ export default function Intro() {
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div className="flex flex-col lg:flex-row  min-h-screen gap-[20px] items-center justify-center w-full px-[20px]">
           <div className="min-w-[250px] h-full flex items-center justify-center transition-all transition-discrete  duration-75">
-            <img className="rounded-lg" width="200" src="/img/metamong.png" />
-            {/* <img className="rounded-lg" width="200" src="/img/BrianProfilePhoto.jpg" /> */}
+            {/* <img className="rounded-lg" width="200" src="/img/metamong.png" /> */}
+            <img className="rounded-lg" width="200" src="/img/BrianProfilePhoto.jpg" />
           </div>
           <div className="w-fit max-w-[360px] flex flex-col items-center justify-center gap-[20px]">
             <div className="text-[25px] w-fit lg:w-full font-semibold flex flex-col justify-end">
@@ -70,7 +71,7 @@ export default function Intro() {
                               className="w-fit flex text-center gap-[12px]"
                             >
                               <strong>프론트엔드 개발자</strong>
-                              <span className="font-normal"> 브라이언</span>
+                              <span className="font-normal"> 정희영</span>
                             </motion.div>
                           </span>
                         </div>
@@ -92,6 +93,38 @@ export default function Intro() {
                 <span className="w-1/2 font-light min-w-[165px]">2009.05 - 2015.08</span>
                 <span className="w-full">호텔 경영학과 학사 졸업(일본어 부전공)</span>
               </div>
+            </div>
+            <div className="flex gap-[12px] w-full">
+              <span className="font-light w-[35px]">📱</span>
+              <span className="w-full font-light ">
+                <a className="cryptedphone" data-name="+82 10" data-domain="5046" data-tld="5137">
+                  <i></i>
+                </a>
+              </span>
+            </div>
+            <div className="flex gap-[12px] w-full">
+              <span className="font-light w-[35px]">📧</span>
+              <span className="w-full font-light ">
+                <a
+                  href="#"
+                  className="cryptedmail"
+                  data-name="jhy2139"
+                  data-domain="gmail"
+                  data-tld="com"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const target = e.currentTarget as HTMLAnchorElement;
+                    const name = target.dataset.name;
+                    const domain = target.dataset.domain;
+                    const tld = target.dataset.tld;
+                    if (name && domain && tld) {
+                      window.location.href = `mailto:${name}@${domain}.${tld}`;
+                    }
+                  }}
+                >
+                  <i className="fas fa-envelopes"></i>
+                </a>
+              </span>
             </div>
           </div>
         </div>

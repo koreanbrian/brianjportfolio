@@ -48,7 +48,12 @@ body {
   transform: scaleX(0);
   transition: transform 0.1s linear;
 }
-
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+}
+.cryptedphone:after {
+  content: attr(data-name) "-" attr(data-domain) "-" attr(data-tld);
+}
 @keyframes scroll-watcher {
   to {
     scale: 1 1;
