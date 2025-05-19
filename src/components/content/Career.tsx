@@ -59,14 +59,14 @@ export default function Career() {
   }, []);
 
   return (
-    <div className="relative h-full flex flex-col justify-center items-center w-full">
+    <div className="relative h-full flex flex-col justify-center items-center w-full pt-[80px] ">
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div
           ref={scrollRef}
-          className="flex flex-col min-h-[calc(100vh-80px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory gap-[20px] mt-[80px] items-start justify-start w-full px-[20px]"
+          className="flex flex-col min-h-[calc(100vh-80px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory gap-[20px] mt-[80px] items-start justify-start w-full px-[20px]  scrollbar-hide"
         >
           <div className="w-full min-w-[350px] h-fit flex flex-col items-start justify-start gap-[10px]">
-            <div className="text-[25px] pt-[80px] w-full h-fit font-semibold flex flex-col justify-end">
+            <div className="text-[25px] w-full h-fit font-semibold flex flex-col justify-end">
               <motion.div
                 ref={ref}
                 key="subject"
@@ -90,21 +90,23 @@ export default function Career() {
                 >
                   <div className="p-[8px] w-full h-[90%] overflow-y-auto">
                     <div className="w-full flex flex-col gap-[4px]">
-                      <div className="subject w-fit flex gap-[5px] bg-gray-100 rounded-md p-[4px]">
+                      <div className="subject w-fit flex text-[20px] bg-gray-100 rounded-md p-[4px]">
                         <span className="font-semibold">{career.company}</span>
                       </div>
-                      <div className="subject w-fit flex gap-[5px] bg-gray-100 rounded-md p-[4px]">
-                        <span className="font-normal">{career.position}</span>
-                      </div>
-                      <div className="subject w-fit flex gap-[10px] text-[14px] bg-gray-100 rounded-md p-[4px]">
-                        <span>{career.startDate}</span>
-                        <span> - </span>
-                        <span>{career.endDate}</span>
+                      <div className="flex gap-[5px] w-full">
+                        <div className="subject w-fit flex text-[12px] bg-gray-100 rounded-md p-[4px]">
+                          <span className="font-normal">{career.position}</span>
+                        </div>
+                        <div className="items-center justify-center w-fit flex gap-[10px] text-[12px] bg-gray-100 rounded-md p-[2px]">
+                          <span>{career.startDate}</span>
+                          <span> - </span>
+                          <span>{career.endDate}</span>
+                        </div>
                       </div>
                     </div>
                     <div className="h-fit flex flex-col  gap-[4px] py-[4px]">
                       <div className="subject text-[12px] w-fit h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
-                        Job Description
+                        주요 업무
                       </div>
                       <div>
                         <ul className="text-[14px] flex flex-col h-fit">
