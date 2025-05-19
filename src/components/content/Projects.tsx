@@ -74,7 +74,7 @@ export default function Projects() {
                 <span>Projects</span>
               </motion.div>
             </div>
-            <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-[16px] py-[20px] -mx-[12px]">
+            <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-[16px] lg:py-[20px] -mx-[12px]">
               {projectInfo.map((project: ProjectDesc, index: number) => (
                 <motion.div
                   key={`project-${index}`}
