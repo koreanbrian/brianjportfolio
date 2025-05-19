@@ -15,7 +15,22 @@ export default function Career() {
     if (!element) return;
 
     const onWheel = (e: WheelEvent) => {
-      if (e.deltaY !== 0) {
+      const element = scrollRef.current;
+      if (!element) return;
+
+      const scrollLeft = element.scrollLeft;
+      const maxScrollLeft = element.scrollWidth - element.clientWidth;
+
+      const isAtStart = scrollLeft <= 0;
+      const isAtEnd = scrollLeft >= maxScrollLeft - 1;
+
+      const scrollingRight = e.deltaY > 0;
+      const scrollingLeft = e.deltaY < 0;
+
+      // Prevent vertical scroll when in horizontal scroll zone
+      const shouldScrollHorizontally = (scrollingRight && !isAtEnd) || (scrollingLeft && !isAtStart);
+
+      if (shouldScrollHorizontally) {
         e.preventDefault();
         element.scrollLeft += e.deltaY;
       }
@@ -87,12 +102,12 @@ export default function Career() {
                         <span>{career.endDate}</span>
                       </div>
                     </div>
-                    <div className="h-full flex flex-col  gap-[4px] py-[4px]">
+                    <div className="h-fit flex flex-col  gap-[4px] py-[4px]">
                       <div className="subject text-[12px] w-fit h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
                         Job Description
                       </div>
                       <div>
-                        <ul className="text-[14px] flex flex-col h-[full]">
+                        <ul className="text-[14px] flex flex-col h-fit">
                           {career.taskDesc.map((task: JobTaskDesc, tIndex: number) => (
                             <li key={`task-${index}-${tIndex}`} className="w-full h-full">
                               <strong className="block">{task.headTask}</strong>
