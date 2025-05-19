@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { projectEntrypointsSubscribe } from "next/dist/build/swc/generated-native";
 import { useEffect, useRef, useState } from "react";
 
 export default function About() {

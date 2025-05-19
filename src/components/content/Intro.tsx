@@ -29,11 +29,11 @@ export default function Intro() {
             <img className="rounded-lg" width="200" src="/img/BrianProfilePhoto.jpg" />
           </div>
           <div className="w-fit max-w-[360px] flex flex-col items-center justify-center gap-[20px]">
-            <div className="text-[25px] w-fit lg:w-full font-semibold flex flex-col justify-end">
+            <div className="text-[23px] w-fit lg:w-full font-semibold flex flex-col justify-end">
               <div className="flex gap-[6px]">
                 <span className="h-fit font-normal">안녕하세요,</span>
               </div>
-              <div className="min-h-[35px] max-w-[350px]">
+              <div className="min-h-[35px] max-w-[320px]">
                 <AnimatePresence mode="wait">
                   {!showName ? (
                     <>
@@ -59,7 +59,7 @@ export default function Intro() {
                       <div className="flex gap-[4px]">
                         <span className="font-light w-[60px] h-fit">저는</span>
                         <div className="w-fit flex gap-[4px] justify-start">
-                          <span className="font-semibold border-b border-b-black w-[300px] h-[35px] justify-center text-center flex">
+                          <span className="font-semibold border-b border-b-black w-[270px] h-[35px] justify-center text-center flex">
                             <motion.div
                               key="name"
                               initial={{ opacity: 0, y: 10 }}
@@ -80,7 +80,7 @@ export default function Intro() {
                 </AnimatePresence>
               </div>
             </div>
-            <div className="w-full flex felx-col gap-[4px]">
+            <div className="w-full flex felx-col gap-[4px] text-[14px]">
               <div className="flex gap-[4px] w-full">
                 <span className="font-light w-[30px]">📱</span>
                 <span className="w-full font-light ">
@@ -114,16 +114,20 @@ export default function Intro() {
                 </span>
               </div>
             </div>
-            <div className="text-[18px] flex flex-col w-full text-gray-700">
+            <div className="text-[16px] flex flex-col w-full text-gray-700">
               <span className="w-full font-semibold">University of Nevada, Las Vegas</span>
-              <span className="w-full font-light text-[16px]">네바다 주립대학교, 라스베가스 캠퍼스</span>
+              <span className="w-full font-normal text-[13px]">네바다 주립대학교, 라스베가스 캠퍼스</span>
               <div className="flex gap-[12px] w-full">
-                <span className="w-1/2 font-light min-w-[165px]">2016.08 - 2020.05</span>
+                <span className="w-[35%] font-light min-w-[150px]">2016.08 - 2020.05</span>
                 <span className="w-full">컴퓨터 공학 학사 졸업</span>
               </div>
               <div className="flex gap-[12px] w-full">
-                <span className="w-1/2 font-light min-w-[165px]">2009.05 - 2015.08</span>
-                <span className="w-full">호텔 경영학과 학사 졸업(일본어 부전공)</span>
+                <span className="w-[35%] font-light min-w-[150px]">2009.05 - 2015.08</span>
+                <span className="w-full">
+                  호텔 경영학과 학사 졸업
+                  <br />
+                  (일본어 부전공)
+                </span>
               </div>
             </div>
           </div>

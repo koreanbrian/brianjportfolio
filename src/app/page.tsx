@@ -10,49 +10,51 @@ import Projects from "@/components/content/Projects";
 import Career from "@/components/content/Career";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { main } from "framer-motion/client";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isAtTop, setIsAtTop] = useState(true);
   const controls = useAnimation();
-  let scrollTimeout: NodeJS.Timeout;
-
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const footerControls = useAnimation();
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
     const handleScroll = () => {
+      const scrollTop = container.scrollTop;
+      const clientHeight = container.clientHeight;
+      const scrollHeight = container.scrollHeight;
+
+      const top = container.scrollTop;
+      const atTop = top === 0;
+      const isNearBottom = scrollTop + clientHeight >= scrollHeight - 40;
+
+      setIsAtTop(atTop);
+
       controls.start({ opacity: 0, transition: { duration: 0.1 } });
 
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        controls.start({ opacity: 1, transition: { duration: 0.1 } });
-      }, 150);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+
+      scrollTimeoutRef.current = setTimeout(() => {
+        controls.start({ opacity: 1, transition: { duration: 0.2, ease: "easeOut" } });
+
+        footerControls.start({
+          opacity: isNearBottom ? 1 : 0,
+          transition: { duration: 0.3, ease: "easeOut" },
+        });
+      }, 500);
     };
 
     container.addEventListener("scroll", handleScroll);
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
 
-    const handleScroll = () => {
-      const top = container.scrollTop;
-      setIsAtTop(top === 0);
-    };
-
-    container.addEventListener("scroll", handleScroll);
-    return () => container.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <main className="flex flex-col h-screen font-spoqa">
-      <motion.div
-        className={`fixed top-0 w-full h-[80px] z-50 ${isAtTop ? "" : "bg-gray-100/70"}`}
-        animate={controls}
-        initial={{ opacity: 1 }}
-      >
+      <motion.div className={`fixed top-0 w-full h-[80px] z-50 ${isAtTop ? "" : "bg-gray-100/70"}`} animate={controls}>
         <Header />
       </motion.div>
       <div
@@ -87,7 +89,7 @@ export default function Home() {
           </ScrollFadeSection>
         </section>
       </div>
-      <motion.div className="fixed bottom-0 w-full" animate={controls} initial={{ opacity: 1 }}>
+      <motion.div className="fixed bottom-0 w-full" animate={footerControls} initial={{ opacity: 0 }}>
         <Footer />
       </motion.div>
     </main>

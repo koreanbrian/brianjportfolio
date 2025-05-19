@@ -4,19 +4,18 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ProjectDesc, ProjectSubTaskDesc } from "@/data/type";
 import { projectInfo } from "@/data/data";
+import { div } from "framer-motion/client";
 
 export default function Projects() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
     const element = scrollRef.current;
     if (!element) return;
 
     const onWheel = (e: WheelEvent) => {
-      const element = scrollRef.current;
-      if (!element) return;
-
       const scrollLeft = element.scrollLeft;
       const maxScrollLeft = element.scrollWidth - element.clientWidth;
 
@@ -26,19 +25,18 @@ export default function Projects() {
       const scrollingRight = e.deltaY > 0;
       const scrollingLeft = e.deltaY < 0;
 
-      // Prevent vertical scroll when in horizontal scroll zone
       const shouldScrollHorizontally = (scrollingRight && !isAtEnd) || (scrollingLeft && !isAtStart);
 
       if (shouldScrollHorizontally) {
-        // e.preventDefault();
+        e.preventDefault();
         element.scrollLeft += e.deltaY;
       }
     };
+
     element.addEventListener("wheel", onWheel, { passive: false });
-    return () => {
-      element.removeEventListener("wheel", onWheel);
-    };
+    return () => element.removeEventListener("wheel", onWheel);
   }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -82,7 +80,7 @@ export default function Projects() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.4 * index }}
-                  className="flex-shrink-0 snap-start w-[90vw] md:w-[450px] h-[calc(100vh-200px)] rounded-lg border bg-white box-border p-[12px] flex flex-col overflow-hidden"
+                  className="flex-shrink-0 snap-start w-[70vw] md:w-[450px] h-[calc(100vh-200px)] rounded-lg border bg-white box-border p-[12px] flex flex-col overflow-hidden"
                 >
                   <div className="box-border p-[12px] w-full h-full overflow-y-auto flex flex-col gap-[8px]">
                     <div className="w-fit flex flex-col gap-[4px]">
@@ -103,38 +101,59 @@ export default function Projects() {
                       </div>
                     </div>
                     <div className="w-full h-fit flex flex-col mt-[4px] gap-[4px] py-[4px]">
-                      <div className="subject text-[12px] w-fit h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
-                        개발 환경
-                      </div>
+                      <div className="subject text-[12px] w-fit font-semibold">개발 환경</div>
                       <div className="h-fit text-[12px] w-full bg-gray-100 rounded-md p-[8px]">
-                        <ul className="flex w-full flex-col">
+                        <div className="flex flex-col gap-[2px] ml-4">
                           {project.devEnvrionment.map((task: string, tIndex: number) => (
-                            <li key={`devEnv-${index}-${tIndex}`} className="w-full h-full">
-                              <span className="block">- {task}</span>
-                            </li>
+                            <motion.div
+                              key={`sub-${index}-${tIndex}`}
+                              initial={{ opacity: 0, y: 10 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true, amount: 0.2 }}
+                              transition={{ duration: 0.6, delay: 0.2 * tIndex }}
+                              className="relative pl-[16px] text-[12px] before:content-['•'] before:absolute before:left-0 before:text-gray-500"
+                            >
+                              <span>{task}</span>
+                            </motion.div>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     </div>
                     <div className="w-fit h-fit flex flex-col gap-[4px] py-[4px] ">
-                      <div className="subject text-[12px] w-fit h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
-                        주요 업무
-                      </div>
-                      <div className="w-full bg-gray-100 p-[8px] rounded-md">
-                        <ul className="text-[12px] w-fit flex flex-col">
-                          {project.taskDesc.map((task: ProjectSubTaskDesc, tIndex: number) => (
-                            <li key={`task-${index}-${tIndex}`} className="w-fit h-full mt-[4px]">
-                              <span className="block font-bold text-[16px]">{task.headTask}</span>
-                              <span className="font-bold">주요 기능: </span>
-                              <span className="font-normal">{task.mainPoint}</span>
-                              <ul className="list-disc list-inside ml-4 mt-1 space-y-1 inline-block max-w-[90%] break-words">
+                      <div className="subject text-[12px] w-fit font-semibold"> 주요 기능</div>
+                      <div className="text-[14px] flex flex-col gap-[12px] border rounded-md px-[8px] py-[12px]">
+                        {project.taskDesc.map((task: ProjectSubTaskDesc, tIndex: number) => (
+                          <motion.div
+                            key={`task-${index}-${tIndex}`}
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, delay: 0.2 * tIndex }}
+                            className="flex flex-col gap-[4px] rounded-md"
+                          >
+                            <span className="block font-bold text-[16px]">{task.headTask}</span>
+                            <div className="bg-gray-100 p-[8px]">
+                              <span className="font-bold">
+                                주요 기능: <span className="font-normal">{task.mainPoint}</span>
+                              </span>
+
+                              <div className="flex flex-col gap-[4px] ml-[8px]">
                                 {task.subTask.map((sub, sIndex) => (
-                                  <li key={`sub-${index}-${tIndex}-${sIndex}`}>{sub}</li>
+                                  <motion.div
+                                    key={`sub-${index}-${tIndex}-${sIndex}`}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, delay: 0.2 * sIndex }}
+                                    className="relative pl-[16px] text-[12px] before:content-['•'] before:absolute before:left-0 before:text-gray-500"
+                                  >
+                                    {sub}
+                                  </motion.div>
                                 ))}
-                              </ul>
-                            </li>
-                          ))}
-                        </ul>
+                              </div>
+                            </div>
+                          </motion.div>
+                        ))}
                       </div>
                     </div>
                   </div>
