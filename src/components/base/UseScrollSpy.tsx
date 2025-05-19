@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 export function useScrollSpy(ids: string[], offset = 0) {
   const [activeId, setActiveId] = useState("");
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

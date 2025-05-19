@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { JobDesc, TaskDesc } from "@/data/type";
+import { JobDesc, JobTaskDesc } from "@/data/type";
 import { careerInfo } from "@/data/data";
 
 export default function Career() {
@@ -88,7 +88,7 @@ export default function Career() {
                       </div>
                       <div>
                         <ul className="text-[14px] flex flex-col h-[350px]">
-                          {career.taskDesc.map((task: TaskDesc, tIndex: number) => (
+                          {career.taskDesc.map((task: JobTaskDesc, tIndex: number) => (
                             <li key={`task-${index}-${tIndex}`}>
                               <strong className="block">{task.headTask}</strong>
                               <ul className="list-disc list-inside ml-4 mt-1 space-y-1">
