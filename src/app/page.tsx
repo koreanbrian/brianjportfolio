@@ -15,32 +15,30 @@ export default function Home() {
         <Header />
       </div>
       <div id="scroll-container" className="h-full overflow-y-auto scroll-snap-y scroll-snap-mandatory scrollbar-hide">
-        <section className="scroll-snap-start h-full">
+        <section id="home" className="scroll-snap-start h-full">
           <ScrollFadeSection isFirst={true}>
             <Intro />
           </ScrollFadeSection>
         </section>
-        <section className="scroll-snap-start scroll-snap-always h-full bg-gray-100">
+        <section id="about" className="scroll-snap-start scroll-snap-always h-full ">
           <ScrollFadeSection>
             <About />
           </ScrollFadeSection>
         </section>
 
-        <section className="scroll-snap-start h-full">
-          {" "}
-          <ScrollFadeSection isLast={true}>
-            <Projects />
-          </ScrollFadeSection>
-        </section>
-
-        <section className="scroll-snap-start scroll-snap-always h-full bg-gray-100">
+        <section id="skills" className="scroll-snap-start scroll-snap-always h-full bg-gray-100">
           <ScrollFadeSection>
             <Skills />
           </ScrollFadeSection>
         </section>
-        <section className="scroll-snap-start scroll-snap-always h-full">
+        <section id="career" className="scroll-snap-start scroll-snap-always h-full">
           <ScrollFadeSection>
             <Career />
+          </ScrollFadeSection>
+        </section>
+        <section id="projects" className="scroll-snap-start h-full bg-gray-100">
+          <ScrollFadeSection isLast={true}>
+            <Projects />
           </ScrollFadeSection>
         </section>
       </div>
