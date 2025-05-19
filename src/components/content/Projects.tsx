@@ -88,12 +88,11 @@ export default function Projects() {
                   transition={{ duration: 0.6, delay: 0.4 * index }}
                   className="w-full max-w-[450px] flex-shrink-0 snap-start h-full border rounded-lg bg-white"
                 >
-                  <div className="p-[12px] w-full h-full overflow-y-auto flex flex-col gap-[8px]">
+                  {/* <div className="p-[12px] w-full h-full overflow-y-auto flex flex-col gap-[8px]"> */}
+                  <div className="box-border p-[12px] w-full h-full overflow-y-auto flex flex-col gap-[8px]">
                     <div className="w-fit flex flex-col gap-[4px]">
                       <div className="subject w-fit flex text-[20px] bg-gray-100 rounded-md p-[4px]">
-                        <span className="font-semibold overflow-hidden text-nowrap truncate">
-                          {project.projectName}
-                        </span>
+                        <span className="font-semibold overflow-hidden line-clamp-2">{project.projectName}</span>
                       </div>
                       <div className="flex gap-[5px] w-full">
                         <div className="subject w-fit flex text-[16px] bg-gray-100 rounded-md p-[4px]">

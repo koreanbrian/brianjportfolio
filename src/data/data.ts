@@ -2,6 +2,50 @@ import { JobDesc, ProjectDesc } from "./type";
 
 export const projectInfo: ProjectDesc[] = [
   {
+    company: "개인 프로젝트(1인)",
+    projectName: "포트폴리오 웹사이트 제작",
+    startDate: "2025.04",
+    endDate: "진행 중",
+    skillStacks: ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS", "AWS S3"],
+    devEnvrionment: [
+      "Next.js 기반 CSR 중심의 정적 포트폴리오 사이트 구현",
+      "Tailwind CSS를 활용한 유틸리티 클래스 기반 반응형 UI 설계",
+      "Framer Motion을 이용한 스크롤 연동 애니메이션 구성",
+      "AWS S3에 커스텀 웹 폰트 업로드 및 `@font-face`로 적용",
+      "전체 뷰포트 기반의 수직/수평 scroll-snap 레이아웃 구성",
+    ],
+    taskDesc: [
+      {
+        headTask: "포트폴리오 섹션 구성 및 UI 설계",
+        mainPoint: "직관적인 섹션 구성을 통한 사용자 경험 강화",
+        subTask: [
+          "'Intro', 'About', 'Skills', 'Projects', 'Career' 등 전체 화면 단위 섹션 구성",
+          "scroll-snap 기능을 활용해 섹션 간 부드러운 전환 구현",
+          "모바일, 태블릿, 데스크톱 디바이스 모두에서 반응형 레이아웃 유지",
+          "컴포넌트 단위로 모듈화하여 유지보수 및 확장 용이성 확보",
+        ],
+      },
+      {
+        headTask: "인터랙션 및 애니메이션 효과",
+        mainPoint: "Framer Motion 기반의 부드러운 등장 애니메이션 구현",
+        subTask: [
+          "섹션별로 Fade-In 및 요소별 딜레이를 조정한 등장 효과 구현",
+          "스크롤 위치에 따라 Header의 배경색 전환 (투명 ↔︎ bg-gray-100)",
+          "Framer Motion `useAnimation`, `useInView` 등을 활용한 트리거 제어",
+        ],
+      },
+      {
+        headTask: "가로 슬라이드 섹션 구현 (Career)",
+        mainPoint: "화면 너비 단위의 슬라이드 구현을 통한 타임라인 표현",
+        subTask: [
+          "`scroll-snap-type: x mandatory`를 활용한 수평 스크롤 방식 설계",
+          "각 슬라이드를 `100vw`로 설정해 풀스크린 뷰 연출",
+          "Framer Motion을 통해 부드러운 이동 및 이름 강조 애니메이션 적용",
+        ],
+      },
+    ],
+  },
+  {
     company: "오픈포맷 [인센토]",
     projectName: "S사 리워드 제공 관리 사이트",
     startDate: "2024.08",
