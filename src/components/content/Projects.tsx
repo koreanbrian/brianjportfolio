@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { JobTaskDesc, ProjectDesc, ProjectSubTaskDesc } from "@/data/type";
+import { ProjectDesc, ProjectSubTaskDesc } from "@/data/type";
 import { projectInfo } from "@/data/data";
-import { span, strong } from "framer-motion/client";
 
 export default function Projects() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -32,7 +31,7 @@ export default function Projects() {
       const shouldScrollHorizontally = (scrollingRight && !isAtEnd) || (scrollingLeft && !isAtStart);
 
       if (shouldScrollHorizontally) {
-        e.preventDefault();
+        // e.preventDefault();
         element.scrollLeft += e.deltaY;
       }
     };
@@ -64,7 +63,7 @@ export default function Projects() {
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div
           ref={scrollRef}
-          className="flex flex-col min-h-[calc(100vh-80px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory gap-[20px] mt-[80px] items-start justify-start w-full px-[20px]  scrollbar-hide"
+          className="flex flex-col min-h-[calc(100vh-200px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory gap-[20px] pt-[40px] items-start justify-start w-full px-[20px]  scrollbar-hide"
         >
           <div className="w-full min-w-[350px] h-fit flex flex-col items-start justify-start gap-[10px]">
             <div className="text-[25px] w-full h-fit font-semibold flex flex-col justify-end">
@@ -79,7 +78,7 @@ export default function Projects() {
                 <span>Projects</span>
               </motion.div>
             </div>
-            <div className="flex w-full gap-[16px] h-[calc(100vh-160px)]">
+            <div className="flex w-full gap-[16px] h-[calc(100vh-200px)]">
               {projectInfo.map((project: ProjectDesc, index: number) => (
                 <motion.div
                   key={`project-${index}`}

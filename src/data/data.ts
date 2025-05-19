@@ -106,7 +106,7 @@ export const projectInfo: ProjectDesc[] = [
   },
   {
     company: "다이얼로그 스페이스",
-    projectName: "크립토택스 앤터프라이즈 [B2B 가상자산 세금 계산 플랫폼]",
+    projectName: "B2B 가상자산 세금 계산 플랫폼",
     startDate: "2022.06",
     endDate: "2024.04",
     skillStacks: ["MySQL", "Spring MVC", "Java", "JavaScript", "MyBatis", "Tomcat", "i18n"],
