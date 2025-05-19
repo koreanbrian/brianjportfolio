@@ -20,8 +20,8 @@ export default function Header() {
   };
 
   return (
-    <div className="relative z-50 flex h-[80px] w-full items-end justify-between ">
-      <div className=" w-full h-full p-[16px] text-[20px] font-normal flex items-end">Brian Jeong's Portfolio</div>
+    <div className="relative z-50 flex h-[80px] w-full items-center justify-between ">
+      <div className=" w-full h-full p-[16px] text-[20px] font-normal flex items-center">Brian Jeong's Portfolio</div>
 
       {/* Desktop Menu */}
       <nav className="hidden lg:flex h-full items-end justify-end gap-[12px] p-[16px] font-semibold">

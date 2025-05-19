@@ -34,7 +34,7 @@ export default function Intro() {
               <div className="flex gap-[6px]">
                 <span className="h-fit font-normal">안녕하세요,</span>
               </div>
-              <div className="overflow-hidden min-h-[35px] max-w-[350px]">
+              <div className="min-h-[35px] max-w-[350px]">
                 <AnimatePresence mode="wait">
                   {!showName ? (
                     <>

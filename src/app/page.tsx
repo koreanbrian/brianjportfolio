@@ -38,7 +38,7 @@ export default function Home() {
             <Career />
           </ScrollFadeSection>
         </section>
-        <section className="scroll-snap-start scroll-snap-always h-[calc(100vh)]">
+        <section className="scroll-snap-start scroll-snap-always h-[calc(100vh)] bg-gray-100">
           <ScrollFadeSection isLast={true}>
             <Projects />
           </ScrollFadeSection>

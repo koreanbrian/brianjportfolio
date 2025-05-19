@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { JobDesc, JobTaskDesc } from "@/data/type";
-import { careerInfo } from "@/data/data";
+import { JobTaskDesc, ProjectDesc, ProjectSubTaskDesc } from "@/data/type";
+import { projectInfo } from "@/data/data";
+import { span, strong } from "framer-motion/client";
 
 export default function Projects() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -79,41 +80,62 @@ export default function Projects() {
               </motion.div>
             </div>
             <div className="flex w-full gap-[16px] h-[calc(100vh-160px)]">
-              {careerInfo.map((career: JobDesc, index: number) => (
+              {projectInfo.map((project: ProjectDesc, index: number) => (
                 <motion.div
                   key={`project-${index}`}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.4 * index }}
-                  className="w-full max-w-[450px] flex-shrink-0 snap-start h-fit min-h-[500px] border rounded-lg  "
+                  className="w-full max-w-[450px] flex-shrink-0 snap-start h-full border rounded-lg bg-white"
                 >
-                  <div className="p-[8px] w-full h-[90%] overflow-y-auto">
-                    <div className="w-full flex flex-col gap-[4px]">
+                  <div className="p-[12px] w-full h-full overflow-y-auto flex flex-col gap-[8px]">
+                    <div className="w-fit flex flex-col gap-[4px]">
                       <div className="subject w-fit flex text-[20px] bg-gray-100 rounded-md p-[4px]">
-                        <span className="font-semibold">{career.company}</span>
+                        <span className="font-semibold overflow-hidden text-nowrap truncate">
+                          {project.projectName}
+                        </span>
                       </div>
                       <div className="flex gap-[5px] w-full">
-                        <div className="subject w-fit flex text-[12px] bg-gray-100 rounded-md p-[4px]">
-                          <span className="font-normal">{career.position}</span>
+                        <div className="subject w-fit flex text-[16px] bg-gray-100 rounded-md p-[4px]">
+                          <span className="font-normal">{project.company}</span>
                         </div>
-                        <div className="items-center justify-center w-fit flex gap-[10px] text-[12px] bg-gray-100 rounded-md p-[2px]">
-                          <span>{career.startDate}</span>
-                          <span> - </span>
-                          <span>{career.endDate}</span>
+                        <div className="flex gap-[5px] w-fit">
+                          <div className="items-center justify-center w-fit flex gap-[10px] text-[12px] bg-gray-100 rounded-md p-[2px]">
+                            <span>{project.startDate}</span>
+                            <span> - </span>
+                            <span>{project.endDate}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="h-fit flex flex-col  gap-[4px] py-[4px]">
+                    <div className="w-full h-fit flex flex-col mt-[4px] gap-[4px] py-[4px]">
+                      <div className="subject text-[12px] w-full h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
+                        개발 환경
+                      </div>
+                      <div className="h-fit text-[12px] w-full bg-gray-100 rounded-md p-[8px]">
+                        <ul className="flex w-full flex-col">
+                          {project.devEnvrionment.map((task: string, tIndex: number) => (
+                            <li key={`devEnv-${index}-${tIndex}`} className="w-full h-full">
+                              <span className="block">- {task}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="w-fit h-fit flex flex-col gap-[4px] py-[4px] ">
                       <div className="subject text-[12px] w-fit h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
                         주요 업무
                       </div>
-                      <div>
-                        <ul className="text-[14px] flex flex-col h-fit">
-                          {career.taskDesc.map((task: JobTaskDesc, tIndex: number) => (
-                            <li key={`task-${index}-${tIndex}`} className="w-full h-full">
-                              <strong className="block">{task.headTask}</strong>
-                              <ul className="list-disc list-inside ml-4 mt-1 space-y-1">
+                      <div className="w-full bg-gray-100 p-[8px] rounded-md">
+                        <ul className="text-[12px] w-fit flex flex-col">
+                          {project.taskDesc.map((task: ProjectSubTaskDesc, tIndex: number) => (
+                            <li key={`task-${index}-${tIndex}`} className="w-fit h-full mt-[4px]">
+                              <span className="block font-bold text-[16px]">{task.headTask}</span>
+                              <span className="font-bold">주요 기능: </span>
+                              <span className="font-normal">{task.mainPoint}</span>
+                              {/* <ul className="list-disc list-inside ml-4 mt-1 space-y-1 w-fit"> */}
+                              <ul className="list-disc list-inside ml-4 mt-1 space-y-1 inline-block max-w-[90%] break-words">
                                 {task.subTask.map((sub, sIndex) => (
                                   <li key={`sub-${index}-${tIndex}-${sIndex}`}>{sub}</li>
                                 ))}
