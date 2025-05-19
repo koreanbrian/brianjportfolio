@@ -6,10 +6,25 @@ import { JobDesc, JobTaskDesc } from "@/data/type";
 import { careerInfo } from "@/data/data";
 
 export default function Career() {
+  const scrollRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [showName, setShowName] = useState(false);
+  useEffect(() => {
+    const element = scrollRef.current;
+    if (!element) return;
 
+    const onWheel = (e: WheelEvent) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        element.scrollLeft += e.deltaY;
+      }
+    };
+    element.addEventListener("wheel", onWheel, { passive: false });
+    return () => {
+      element.removeEventListener("wheel", onWheel);
+    };
+  }, []);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -30,15 +45,15 @@ export default function Career() {
 
   return (
     <div className="relative h-full flex flex-col justify-center items-center w-full">
-      <div className="w-full h-[80px]" />
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div
-          ref={ref}
+          ref={scrollRef}
           className="flex flex-col min-h-[calc(100vh-80px)] gap-[20px] mt-[80px] items-start justify-start w-full px-[20px]"
         >
           <div className="w-full min-w-[350px] h-fit flex flex-col items-start justify-start gap-[10px]">
             <div className="text-[25px] w-full h-fit font-semibold flex flex-col justify-end">
               <motion.div
+                ref={ref}
                 key="subject"
                 initial={{ opacity: 0, y: 10 }}
                 animate={visible ? { opacity: 1, y: 0 } : {}}
@@ -48,17 +63,7 @@ export default function Career() {
                 <span>Career</span>
               </motion.div>
             </div>
-            <div
-              className="flex gap-[16px] justify-start items-start w-full overflow-x-auto py-[8px]"
-              onWheel={(e) => {
-                // Horizontal scroll on vertical wheel
-                const container = e.currentTarget;
-                if (e.deltaY !== 0) {
-                  e.preventDefault();
-                  container.scrollLeft += e.deltaY;
-                }
-              }}
-            >
+            <div className="flex gap-[16px] justify-start items-start w-full overflow-x-auto py-[8px]">
               {careerInfo.map((career: JobDesc, index: number) => (
                 <motion.div
                   key={`career-${index}`}

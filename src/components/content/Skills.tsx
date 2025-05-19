@@ -39,7 +39,15 @@ export default function Skills() {
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div className="flex flex-col  min-h-screen gap-[20px] items-center justify-center w-full px-[20px]">
           <div className="text-[35px] w-full font-semibold">
-            <span>Skills</span>
+            <motion.div
+              key="subject"
+              initial={{ opacity: 0, y: 10 }}
+              animate={visible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="text-[35px] w-full font-semibold"
+            >
+              <span>Skills</span>
+            </motion.div>
           </div>
           <div className="text-[20px] flex flex-col w-full text-gray-700 gap-[20px]">
             <table>

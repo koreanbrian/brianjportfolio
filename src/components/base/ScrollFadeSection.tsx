@@ -15,7 +15,7 @@ export default function ScrollFadeSection({
 }) {
   const { ref, inView } = useInView({
     threshold: 0.5,
-    rootMargin: isFirst ? "0px 0px -20% 0px" : isLast ? "-20% 0px 0px 0px" : "-40% 0px -40% 0px",
+    rootMargin: isFirst ? "0px 0px -20% 0px" : isLast ? "-20% 0px 0px 0px" : "-40% 0px 0px 0px",
     triggerOnce: true,
   });
   const controls = useAnimation();
@@ -32,7 +32,7 @@ export default function ScrollFadeSection({
       variants={{
         hidden: {
           opacity: 0,
-          y: isFirst ? "0%" : isLast ? "20%" : "40%",
+          y: isFirst ? "0%" : isLast ? "20%" : "45%",
         },
         visible: {
           opacity: 1,

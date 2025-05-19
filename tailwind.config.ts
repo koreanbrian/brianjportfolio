@@ -19,7 +19,9 @@ const config: Config = {
         noto: ['"Noto Sans KR"', "sans-serif"],
         spoqa: ["Spoqa Han Sans Neo", "sans-serif"],
       },
-      //let's see
+      scrollSnapStop: {
+        always: "always",
+      },
     },
   },
   plugins: [],
