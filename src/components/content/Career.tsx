@@ -61,7 +61,10 @@ export default function Career() {
   return (
     <div className="relative h-full flex flex-col justify-center items-center w-full">
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
-        <div className="flex flex-col min-h-[calc(100vh-80px)] gap-[20px] mt-[80px] items-start justify-start w-full px-[20px]">
+        <div
+          ref={scrollRef}
+          className="flex flex-col min-h-[calc(100vh-80px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory gap-[20px] mt-[80px] items-start justify-start w-full px-[20px]"
+        >
           <div className="w-full min-w-[350px] h-fit flex flex-col items-start justify-start gap-[10px]">
             <div className="text-[25px] pt-[80px] w-full h-fit font-semibold flex flex-col justify-end">
               <motion.div
@@ -75,10 +78,7 @@ export default function Career() {
                 <span>Career</span>
               </motion.div>
             </div>
-            <div
-              ref={scrollRef}
-              className="flex w-fit gap-[16px] h-[calc(100vh-160px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory"
-            >
+            <div className="flex w-full gap-[16px] h-[calc(100vh-160px)]">
               {careerInfo.map((career: JobDesc, index: number) => (
                 <motion.div
                   key={`career-${index}`}
@@ -86,9 +86,9 @@ export default function Career() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.4 * index }}
-                  className="w-full max-w-[400px] flex-shrink-0 snap-start"
+                  className="w-full max-w-[450px] flex-shrink-0 snap-start h-fit min-h-[500px] border rounded-lg  "
                 >
-                  <div className="p-[8px] w-full h-[90%] border rounded-lg  overflow-y-auto">
+                  <div className="p-[8px] w-full h-[90%] overflow-y-auto">
                     <div className="w-full flex flex-col gap-[4px]">
                       <div className="subject w-fit flex gap-[5px] bg-gray-100 rounded-md p-[4px]">
                         <span className="font-semibold">{career.company}</span>
