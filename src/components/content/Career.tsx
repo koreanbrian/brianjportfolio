@@ -46,12 +46,9 @@ export default function Career() {
   return (
     <div className="relative h-full flex flex-col justify-center items-center w-full">
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
-        <div
-          ref={scrollRef}
-          className="flex flex-col min-h-[calc(100vh-80px)] gap-[20px] mt-[80px] items-start justify-start w-full px-[20px]"
-        >
+        <div className="flex flex-col min-h-[calc(100vh-80px)] gap-[20px] mt-[80px] items-start justify-start w-full px-[20px]">
           <div className="w-full min-w-[350px] h-fit flex flex-col items-start justify-start gap-[10px]">
-            <div className="text-[25px] w-full h-fit font-semibold flex flex-col justify-end">
+            <div className="text-[25px] pt-[80px] w-full h-fit font-semibold flex flex-col justify-end">
               <motion.div
                 ref={ref}
                 key="subject"
@@ -63,7 +60,10 @@ export default function Career() {
                 <span>Career</span>
               </motion.div>
             </div>
-            <div className="flex gap-[16px] justify-start items-start w-full overflow-x-auto py-[8px]">
+            <div
+              ref={scrollRef}
+              className="flex w-fit gap-[16px] h-[calc(100vh-160px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory"
+            >
               {careerInfo.map((career: JobDesc, index: number) => (
                 <motion.div
                   key={`career-${index}`}
@@ -71,9 +71,9 @@ export default function Career() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.4 * index }}
-                  className="min-w-[300px] max-w-[400px] flex-shrink-0 snap-start"
+                  className="w-full max-w-[400px] flex-shrink-0 snap-start"
                 >
-                  <div className="p-[8px] w-full h-full border rounded-lg">
+                  <div className="p-[8px] w-full h-[90%] border rounded-lg  overflow-y-auto">
                     <div className="w-full flex flex-col gap-[4px]">
                       <div className="subject w-fit flex gap-[5px] bg-gray-100 rounded-md p-[4px]">
                         <span className="font-semibold">{career.company}</span>
@@ -87,14 +87,14 @@ export default function Career() {
                         <span>{career.endDate}</span>
                       </div>
                     </div>
-                    <div className="h-full overflow-y-auto flex flex-col max-h-[45vh] gap-[4px] py-[4px]">
+                    <div className="h-full flex flex-col  gap-[4px] py-[4px]">
                       <div className="subject text-[12px] w-fit h-fit bg-gray-100 rounded-md p-[4px] font-semibold">
                         Job Description
                       </div>
                       <div>
-                        <ul className="text-[14px] flex flex-col h-[350px]">
+                        <ul className="text-[14px] flex flex-col h-[full]">
                           {career.taskDesc.map((task: JobTaskDesc, tIndex: number) => (
-                            <li key={`task-${index}-${tIndex}`}>
+                            <li key={`task-${index}-${tIndex}`} className="w-full h-full">
                               <strong className="block">{task.headTask}</strong>
                               <ul className="list-disc list-inside ml-4 mt-1 space-y-1">
                                 {task.subTask.map((sub, sIndex) => (

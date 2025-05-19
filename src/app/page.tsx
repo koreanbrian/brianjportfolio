@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       <div
         id="scroll-container"
-        className="h-[calc(100vh-80px)] overflow-y-auto scroll-snap-y scroll-snap-mandatory scrollbar-hide"
+        className="h-[calc(100vh)] overflow-y-auto scroll-snap-y scroll-snap-mandatory scrollbar-hide"
       >
         <section className="scroll-snap-start h-[calc(100vh)]">
           <ScrollFadeSection isFirst={true}>

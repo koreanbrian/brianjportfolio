@@ -58,7 +58,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-[80px] left-0 w-full bg-white shadow-md lg:hidden flex flex-col items-center gap-4 p-4">
+        <div className="absolute top-[80px] left-0 w-full bg-white lg:hidden flex flex-col items-center gap-4 p-4">
           {menuIds.map((id) => (
             <div
               key={id}
