@@ -82,6 +82,40 @@ export default function Intro() {
                 </AnimatePresence>
               </div>
             </div>
+            <div className="w-full flex felx-col gap-[4px]">
+              <div className="flex gap-[4px] w-full">
+                <span className="font-light w-[30px]">📱</span>
+                <span className="w-full font-light ">
+                  <a className="cryptedphone" data-name="+82 10" data-domain="5046" data-tld="5137">
+                    <i></i>
+                  </a>
+                </span>
+              </div>
+              <div className="flex gap-[4px] w-full">
+                <span className="font-light w-[30px]">📧</span>
+                <span className="w-full font-light ">
+                  <a
+                    href="#"
+                    className="cryptedmail"
+                    data-name="jhy2139"
+                    data-domain="gmail"
+                    data-tld="com"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const target = e.currentTarget as HTMLAnchorElement;
+                      const name = target.dataset.name;
+                      const domain = target.dataset.domain;
+                      const tld = target.dataset.tld;
+                      if (name && domain && tld) {
+                        window.location.href = `mailto:${name}@${domain}.${tld}`;
+                      }
+                    }}
+                  >
+                    <i className="fas fa-envelopes"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
             <div className="text-[18px] flex flex-col w-full text-gray-700">
               <span className="w-full font-semibold">University of Nevada, Las Vegas</span>
               <span className="w-full font-light text-[16px]">네바다 주립대학교, 라스베가스 캠퍼스</span>
@@ -93,38 +127,6 @@ export default function Intro() {
                 <span className="w-1/2 font-light min-w-[165px]">2009.05 - 2015.08</span>
                 <span className="w-full">호텔 경영학과 학사 졸업(일본어 부전공)</span>
               </div>
-            </div>
-            <div className="flex gap-[12px] w-full">
-              <span className="font-light w-[35px]">📱</span>
-              <span className="w-full font-light ">
-                <a className="cryptedphone" data-name="+82 10" data-domain="5046" data-tld="5137">
-                  <i></i>
-                </a>
-              </span>
-            </div>
-            <div className="flex gap-[12px] w-full">
-              <span className="font-light w-[35px]">📧</span>
-              <span className="w-full font-light ">
-                <a
-                  href="#"
-                  className="cryptedmail"
-                  data-name="jhy2139"
-                  data-domain="gmail"
-                  data-tld="com"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const target = e.currentTarget as HTMLAnchorElement;
-                    const name = target.dataset.name;
-                    const domain = target.dataset.domain;
-                    const tld = target.dataset.tld;
-                    if (name && domain && tld) {
-                      window.location.href = `mailto:${name}@${domain}.${tld}`;
-                    }
-                  }}
-                >
-                  <i className="fas fa-envelopes"></i>
-                </a>
-              </span>
             </div>
           </div>
         </div>
