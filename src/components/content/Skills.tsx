@@ -61,11 +61,11 @@ export default function Skills() {
                         animate={visible ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 1.2 }}
                       >
-                        <span className="font-semibold">{head}</span>
+                        <span className="font-semibold lg:text-[18px] text-[12px]">{head}</span>
                       </motion.div>
                     </td>
                     <td className="p-[4px]">
-                      <div className="flex w-fit flex-wrap gap-[4px]">
+                      <div className="flex w-fit flex-wrap gap-[8px]">
                         {(tableContents[head] || []).map((item, idx) => (
                           <motion.span
                             key={`skill-${index}-${idx}`}
