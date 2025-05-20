@@ -46,7 +46,7 @@ export default function About() {
                 기술과 비즈니스 관점을 모두 이해하는 프론트엔드 개발자입니다.
                 <br />
                 <strong>React</strong>와 <strong>Next.js</strong> 를 중심으로,
-                <br /> 다양한 기술 경험을 통한 다양한 웹 서비스를 구축하며,
+                <br /> 다양한 기술 경험을 통한 웹 서비스를 구축하며,
                 <br />
                 사용자 중심의 직관적인 경험을 구현하는 데 집중해왔습니다.
               </span>

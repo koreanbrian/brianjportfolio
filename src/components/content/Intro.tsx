@@ -48,7 +48,7 @@ export default function Intro() {
                           className="w-fit flex gap-[4px] justify-start"
                         >
                           <div className="flex gap-[4px]">
-                            <span className="font-semibold border-b border-b-black w-[300px] h-[35px] justify-start text-center flex "></span>
+                            <span className="font-semibold border-b border-b-black w-[270px] h-[35px] justify-start text-center flex "></span>
                           </div>
                         </motion.div>
                       </div>
@@ -122,7 +122,7 @@ export default function Intro() {
                 <span className="w-full">컴퓨터 공학 학사 졸업</span>
               </div>
               <div className="flex gap-[12px] w-full">
-                <span className="w-[35%] font-light min-w-[150px]">2009.05 - 2015.08</span>
+                <span className="w-[35%] font-light min-w-[150px]">2009.08 - 2015.05</span>
                 <span className="w-full">
                   호텔 경영학과 학사 졸업
                   <br />
