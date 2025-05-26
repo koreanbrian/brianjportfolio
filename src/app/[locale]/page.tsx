@@ -88,10 +88,10 @@ export default function Home() {
             <Projects />
           </ScrollFadeSection>
         </section>
+        <motion.div className="w-full" animate={footerControls} initial={{ opacity: 0 }}>
+          <Footer />
+        </motion.div>
       </div>
-      <motion.div className="fixed bottom-0 w-full" animate={footerControls} initial={{ opacity: 0 }}>
-        <Footer />
-      </motion.div>
     </main>
   );
 }

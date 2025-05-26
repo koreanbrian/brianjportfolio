@@ -87,6 +87,23 @@ export default function Header() {
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </div>
           ))}
+          <div className="flex gap-[5px] text-normal font-light">
+            <a>[</a>
+            <button
+              onClick={() => languageChange("ko")}
+              className={currentLocale === "ko" ? "font-bold" : "font-light"}
+            >
+              ko
+            </button>
+            <span>/</span>
+            <button
+              onClick={() => languageChange("en")}
+              className={currentLocale === "en" ? "font-bold" : "font-light"}
+            >
+              en
+            </button>
+            <a>]</a>
+          </div>
         </div>
       )}
     </div>
