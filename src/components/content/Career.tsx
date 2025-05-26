@@ -2,14 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { JobDesc, JobTaskDesc } from "@/data/type";
-import { careerInfo } from "@/data/data";
+import { useTranslations } from "next-intl";
 
 export default function Career() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [showName, setShowName] = useState(false);
+
+  const t = useTranslations("career");
+  const jobs = t.raw("jobs") as any[];
 
   useEffect(() => {
     const element = scrollRef.current;
@@ -70,12 +72,12 @@ export default function Career() {
                 transition={{ duration: 0.6 }}
                 className="text-[35px] w-full font-semibold"
               >
-                <span>Career</span>
+                <span>{t("title")}</span>
               </motion.div>
             </div>
 
             <div className="flex w-full gap-[16px] h-[calc(100vh-160px)]">
-              {careerInfo.map((career: JobDesc, index: number) => (
+              {jobs.map((career, index) => (
                 <motion.div
                   key={`career-${index}`}
                   initial={{ opacity: 0, y: 10 }}
@@ -104,7 +106,7 @@ export default function Career() {
                     <div className="h-fit flex flex-col gap-[4px] py-[4px]">
                       <div className="subject text-[12px] w-fit font-semibold">주요 업무</div>
                       <div className="text-[14px] flex flex-col gap-[12px] border rounded-md px-[8px] py-[12px]">
-                        {career.taskDesc.map((task: JobTaskDesc, tIndex: number) => (
+                        {career.taskDesc.map((task: any, tIndex: number) => (
                           <motion.div
                             key={`task-${index}-${tIndex}`}
                             initial={{ opacity: 0, y: 10 }}
@@ -116,7 +118,7 @@ export default function Career() {
                             <strong>{task.headTask}</strong>
 
                             <div className="flex flex-col gap-[2px] ml-4">
-                              {task.subTask.map((sub, sIndex) => (
+                              {task.subTask.map((sub: string, sIndex: number) => (
                                 <motion.div
                                   key={`sub-${index}-${tIndex}-${sIndex}`}
                                   initial={{ opacity: 0, y: 10 }}

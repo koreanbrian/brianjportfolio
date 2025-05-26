@@ -1,23 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { label } from "framer-motion/client";
+import { useTranslations } from "next-intl";
+import head from "next/head";
 import { useEffect, useRef, useState } from "react";
 
 export default function Skills() {
-  const tableHead: string[] = [
-    "언어",
-    "프로그래밍 언어",
-    "프레임워크 / 라이브러리",
-    "Infrastructure & DB",
-    "Tools & IDEs",
+  const t = useTranslations("skills");
+
+  const tableHead = [
+    { key: "language", label: t("tableHead.language") },
+    { key: "programming", label: t("tableHead.programming") },
+    { key: "framework", label: t("tableHead.framework") },
+    { key: "infra", label: t("tableHead.infra") },
+    { key: "tools", label: t("tableHead.tools") },
   ];
-  const tableContents: { [key: string]: string[] } = {
-    언어: ["영어[상 / 미국유학]", "일본어[JLPT N2]"],
-    "프로그래밍 언어": ["TypeScript", "JavaScript", "Java", "HTML / CSS", "PHP", "Python"],
-    "프레임워크 / 라이브러리": ["React.js", "Next.js with TypeScript", "Spring Framework (MVC)", "CodeIgniter 4"],
-    "Infrastructure & DB": ["MySQL", "PostGreSQL", "MongoDB", "Redis", "MyBatis", "Docker", "Apache Tomcat"],
-    "Tools & IDEs": ["Adobe Photoshop", "PyCharm", "IntelliJ IDEA", "Eclipse", "VSCode"],
-  };
+
+  const tableContents = t.raw("tableContents") as Record<string, string[]>;
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const hasShown = useRef(false);
@@ -53,7 +53,7 @@ export default function Skills() {
           <div className="text-[18px] flex flex-col w-full text-gray-700 gap-[20px]">
             <table>
               <tbody>
-                {tableHead.map((head, index) => (
+                {tableHead.map(({ key, label }, index) => (
                   <tr key={index}>
                     <td>
                       <motion.div
@@ -61,12 +61,12 @@ export default function Skills() {
                         animate={visible ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 1.2 }}
                       >
-                        <span className="font-semibold lg:text-[18px] text-[12px]">{head}</span>
+                        <span className="font-semibold lg:text-[18px] text-[12px]">{label}</span>
                       </motion.div>
                     </td>
                     <td className="p-[4px]">
                       <div className="flex w-fit flex-wrap gap-[8px]">
-                        {(tableContents[head] || []).map((item, idx) => (
+                        {(tableContents[key] || []).map((item, idx) => (
                           <motion.span
                             key={`skill-${index}-${idx}`}
                             initial={{ opacity: 0, y: 10 }}

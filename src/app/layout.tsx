@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-
+// src/app/layout.tsx
+import { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -7,13 +7,9 @@ export const metadata: Metadata = {
   description: "This is Brian Jeong's Portfolio Website.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html className="scroll-smooth">
       <body>{children}</body>
     </html>
   );
