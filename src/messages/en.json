@@ -2,9 +2,8 @@
   "intro": {
     "hello": "Hello,",
     "iAm": "I'm",
-    "developer": "Frontend Developer",
+    "developer": "a frontend developer",
     "name": "Brian Jeong",
-    "end": ".",
     "phone": "📱",
     "email": "📧",
     "university": "University of Nevada, Las Vegas",
@@ -141,12 +140,11 @@
         "projectName": "Portfolio Website Development",
         "startDate": "2025.04",
         "endDate": "Ongoing",
-        "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS", "AWS S3"],
+        "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
         "devEnvironment": [
           "Implemented a static CSR-focused portfolio site using Next.js",
           "Designed a responsive UI using utility-class-based Tailwind CSS",
           "Composed scroll-triggered animations with Framer Motion",
-          "Uploaded custom web fonts to AWS S3 and applied via `@font-face`",
           "Built a full-viewport vertical/horizontal scroll-snap layout"
         ],
         "taskDesc": [

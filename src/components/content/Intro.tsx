@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { div } from "framer-motion/client";
 
 export default function Intro() {
   const t = useTranslations("intro");
+  const locale = useLocale();
   const ref = useRef<HTMLDivElement>(null);
   const [showName, setShowName] = useState(false);
 
@@ -64,7 +66,9 @@ export default function Intro() {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -10 }}
                               transition={{ duration: 0.6 }}
-                              className="w-fit flex text-center gap-[12px]"
+                              className={`w-full flex text-center gap-[12px] items-center justify-center ${
+                                locale === "ko" ? "text-[24px]" : "text-[16px]"
+                              }`}
                             >
                               <strong>{t("developer")}</strong>
                               <span className="font-normal">{t("name")}</span>
@@ -72,7 +76,7 @@ export default function Intro() {
                           </span>
                         </div>
                       </div>
-                      <span className="font-light w-[60px] text-[25px] ">{t("end")}</span>
+                      {/* <span className="font-light w-[60px] text-[25px] ">{t("end")}</span> */}
                     </>
                   )}
                 </AnimatePresence>
