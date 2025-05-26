@@ -386,7 +386,6 @@ export default function Projects() {
   }, []);
 
   const projects = t.raw("projects") as any[];
-  console.log("projects", projects);
   const title = t("title");
   return (
     <div className="relative h-full flex flex-col justify-center items-center w-full pt-[80px]">
@@ -436,7 +435,7 @@ export default function Projects() {
                       </div>
                     </div>
                     <div className="w-full h-fit flex flex-col mt-[4px] gap-[4px] py-[4px]">
-                      {/* <div className="subject text-[12px] w-fit font-semibold">{t("devEnvironment")}</div> */}
+                      <div className="subject text-[12px] w-fit font-semibold">{t("devEnvironment")}</div>
                       <div className="w-full flex flex-wrap gap-[4px] py-[4px]">
                         {Array.isArray(project.skillStacks) &&
                           project.skillStacks.map((skill: string, sIdx: number) => (

@@ -129,9 +129,9 @@
   },
   "projects": {
     "title": "Projects",
-    "mainPoint": "Main Point",
-    "devEnvironment": "Development Environment",
-    "skillStacks": "Skill Stacks",
+    "mainPoint": "주요기능",
+    "devEnvironment": "개발환경",
+    "skillStacks": "사용 기술",
     "projects": [
       {
         "company": "개인 프로젝트(1인)",
