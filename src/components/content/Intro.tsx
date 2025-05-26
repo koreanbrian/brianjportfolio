@@ -76,7 +76,7 @@ export default function Intro() {
                           </span>
                         </div>
                       </div>
-                      {/* <span className="font-light w-[60px] text-[25px] ">{t("end")}</span> */}
+                      <span className="font-light w-[60px] text-[25px] ">{t("end")}</span>
                     </>
                   )}
                 </AnimatePresence>
