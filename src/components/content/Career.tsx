@@ -8,7 +8,6 @@ export default function Career() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
-  const [showName, setShowName] = useState(false);
 
   const t = useTranslations("career");
   const jobs = t.raw("jobs") as any[];
@@ -44,9 +43,7 @@ export default function Career() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          setTimeout(() => setShowName(true), 2000);
-        } else {
-          setShowName(false);
+          setTimeout(() => setVisible(true), 2000);
         }
       },
       { threshold: 0.4 }
@@ -60,7 +57,7 @@ export default function Career() {
       <div className="absolute h-full justify-center items-center px-[20px] gap-[20px] w-full">
         <div
           ref={scrollRef}
-          className="flex flex-col min-h-[calc(100vh-160px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory gap-[20px] pt-[40px] items-start justify-start w-full px-[20px] scrollbar-hide"
+          className="flex flex-col min-h-[calc(100vh-200px)] overflow-x-auto scroll-snap-x scroll-snap-mandatory gap-[20px] pt-[40px] items-start justify-start w-full px-[20px] scrollbar-hide"
         >
           <div className="w-full min-w-[350px] h-fit flex flex-col items-start justify-start gap-[10px]">
             <div className="text-[25px] w-full h-fit font-semibold flex flex-col justify-end">
