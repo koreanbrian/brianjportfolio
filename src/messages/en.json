@@ -1,14 +1,14 @@
 {
   "intro": {
     "hello": "Hello,",
-    "iAm": "I'm",
-    "developer": "a frontend developer",
+    "iAm": "I'm a",
+    "developer": "frontend developer,",
     "name": "Brian Jeong",
     "end": "",
     "phone": "📱",
     "email": "📧",
     "university": "University of Nevada, Las Vegas",
-    "universityKorean": "University of Nevada, Las Vegas Campus",
+    "universityKorean": "",
     "csPeriod": "Aug 2016 - May 2020",
     "csDegree": "B.A. in Computer Science",
     "hmPeriod": "Aug 2009 - May 2015",
@@ -34,22 +34,22 @@
   },
   "about": {
     "title": "About me",
-    "paragraph1": "A frontend developer who understands both technology and business.\nCentered around React and Next.js,\nI focus on building intuitive, user-centered web services\nthrough diverse technical experiences.",
-    "paragraph2": "With experience working in multinational teams\nand communication skills in Korean, English, and Japanese,\nI am able to flexibly respond to business and user needs both locally and globally."
+    "paragraph1": "A frontend developer with \na strong understanding in both technology and business.\nSpecialized in React and Next.js,\nI build intuitive, user-centered web services\nbacked by diverse technical experience.",
+    "paragraph2": "With experience in multinational teams\nand fluency in Korean, English, and Japanese,\nI can effectively address both business\nand user needs on a global scale."
   },
   "career": {
     "title": "Career",
     "jobs": [
       {
         "company": "Openformat [Incento]",
-        "position": "Software Engineer",
+        "position": "Software Engineer [Frontend]",
         "startDate": "May 2024",
         "endDate": "Present",
         "taskDesc": [
           {
             "headTask": "Project Leadership & Planning",
             "subTask": [
-              "Led frontend & UI/UX renewal of Cafe24 referral plugin Incento with 10 multicultural team members",
+              "Led frontend & UI/UX renewal of Cafe24 referral plugin 'Incento' with 10 multinational team members",
               "Planned and redesigned the Incent admin site to improve usability and operational efficiency",
               "Designed business logic and improved service architecture based on user needs"
             ]
@@ -59,12 +59,12 @@
             "subTask": [
               "Built responsive web design optimized for various devices",
               "Improved data visualization and clarity through intuitive dashboards and simplified workflows",
-              "Developed reusable component architecture using TypeScript, Next.js, React",
+              "Developed reusable component architecture using  Next.js with TypeScript and Tailwind CSS",
               "Optimized styling using Tailwind CSS with consistent design system"
             ]
           },
           {
-            "headTask": "Data Management & Deployment Infrastructure",
+            "headTask": "Data Handling & Deployment Infrastructure",
             "subTask": [
               "Visualized dashboard data using Chart.js and nivo",
               "Managed data with PostgreSQL and handled secure files with AWS S3/CloudFront",
@@ -74,7 +74,7 @@
         ]
       },
       {
-        "company": "Dialog Space",
+        "company": "Dialoge Space",
         "position": "Software Engineer",
         "startDate": "Aug 2021",
         "endDate": "Apr 2024",
@@ -82,16 +82,16 @@
           {
             "headTask": "Service Development & Architecture",
             "subTask": [
-              "Developed crypto asset management service 'CryptoTax' using Spring MVC and Tomcat",
+              "Developed cryptocurrency asset management service 'CryptoTax' using Spring MVC and Tomcat",
               "Managed data using MySQL, MongoDB, and MyBatis",
-              "Integrated APIs from major crypto exchanges and implemented backend logic"
+              "Integrated APIs from major cryptocurrency exchanges and implemented backend logic"
             ]
           },
           {
             "headTask": "Frontend Development & UI",
             "subTask": [
               "Developed user-friendly views using HTML, CSS, JavaScript, and jQuery",
-              "Built multilingual website using i18n and translated Korean site into English"
+              "Built a multilingual website using i18n and translated the Korean version into English"
             ]
           },
           {
@@ -143,37 +143,36 @@
         "endDate": "Ongoing",
         "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
         "devEnvironment": [
-          "Implemented a static CSR-focused portfolio site using Next.js",
-          "Designed a responsive UI using utility-class-based Tailwind CSS",
-          "Composed scroll-triggered animations with Framer Motion",
+          "Implemented a static CSR-focused portfolio site using Next.js with TypeScript",
+          "Designed a responsive UI using Tailwind CSS",
+          "Implemented scroll-triggered animations using Framer Motion",
           "Built a full-viewport vertical/horizontal scroll-snap layout"
         ],
         "taskDesc": [
           {
-            "headTask": "Portfolio Section Layout and UI Design",
-            "mainPoint": "Enhanced user experience through intuitive section layout",
+            "headTask": "Section Layout & UI Design",
+            "mainPoint": "Improved user experience with an intuitive section layout",
             "subTask": [
               "Structured full-screen sections: 'Intro', 'About', 'Skills', 'Projects', 'Career'",
-              "Implemented smooth transitions between sections using scroll-snap",
-              "Maintained responsive layout across mobile, tablet, and desktop devices",
-              "Modularized components for improved maintainability and scalability"
+              "Implemented smooth transitions between sections via scroll-snap",
+              "Maintained responsive design/layout across mobile, tablet, and desktop devices",
+              "Modularized components for scalability and maintenance"
             ]
           },
           {
-            "headTask": "Interaction and Animation Effects",
+            "headTask": "Animations & Interactivity",
             "mainPoint": "Implemented smooth entrance animations using Framer Motion",
             "subTask": [
-              "Applied fade-in and staggered entrance effects per section",
-              "Changed header background color based on scroll position (transparent ↔︎ bg-gray-100)",
-              "Controlled animation triggers using Framer Motion's `useAnimation` and `useInView`"
+              "Used fade-in and staggered entrance effects per section",
+              "Dynamically changed header background color on scroll",
+              "Controlled animations via `useAnimation` and `useInView`"
             ]
           },
           {
-            "headTask": "Horizontal Slide Section (Career)",
+            "headTask": "Horizontal Slide (Career Section)",
             "mainPoint": "Implemented timeline-like slides spanning full screen width",
             "subTask": [
               "Designed horizontal scrolling using `scroll-snap-type: x mandatory`",
-              "Set each slide to `100vw` for full-screen display",
               "Applied smooth slide transitions and emphasized names using Framer Motion"
             ]
           }
@@ -181,7 +180,7 @@
       },
       {
         "company": "Openformat [Incento]",
-        "projectName": "Reward Campaign Management Site for S Company",
+        "projectName": "S-Company Reward Management Site",
         "startDate": "2024.08",
         "endDate": "2025.05",
         "skillStacks": [
@@ -195,11 +194,11 @@
           "CloudFront"
         ],
         "devEnvironment": [
-          "Optimized data management using PostgreSQL",
-          "Implemented stable cloud-based file storage and delivery using AWS S3 and CloudFront",
-          "Deployed frontend application with Vercel",
-          "Applied consistent UI styling using Tailwind CSS",
-          "Developed a visual dashboard using Chart.js and nivo for key performance metrics"
+          "Managed data with PostgreSQL",
+          "Implemented cloud-based file storage using AWS S3 and CloudFront",
+          "Deployed frontend on Vercel",
+          "Applied consistent styling via Tailwind CSS",
+          "Developed dashboards using Chart.js and nivo to visualize key performance metrics"
         ],
         "taskDesc": [
           {
@@ -283,8 +282,8 @@
         ]
       },
       {
-        "company": "DialogSpace",
-        "projectName": "B2B Crypto Tax Calculation Platform",
+        "company": "Dialoge Space",
+        "projectName": "B2B CryptoTax Calculation Platform",
         "startDate": "2022.06",
         "endDate": "2024.04",
         "skillStacks": ["MySQL", "Spring MVC", "Java", "JavaScript", "MyBatis", "Tomcat", "i18n"],
@@ -293,7 +292,7 @@
           "Built secure and efficient file upload/download system using AWS S3, CloudFront, and Lambda",
           "Designed backend with Java Spring MVC framework",
           "Implemented multi-language (Korean/English) support using i18n",
-          "Developed enterprise crypto tax management system for B2B clients",
+          "Developed enterprise cryptocurrency tax management system for B2B clients",
           "Deployed with Apache Tomcat"
         ],
         "taskDesc": [
@@ -305,7 +304,7 @@
               "Visualized daily metrics at midnight for user convenience",
               "Used Ajax for async loading and speed optimization",
               "Utilized Google Charts for visualizing new/existing data",
-              "Clearly presented asset and transaction statistics per crypto"
+              "Clearly presented asset and transaction statistics per cryptocurrency"
             ]
           },
           {
@@ -319,14 +318,14 @@
             ]
           },
           {
-            "headTask": "Crypto Integration",
+            "headTask": "Cryptocurrency Integration",
             "mainPoint": "Supported API and file-based transaction sync",
             "subTask": [
               "Synced with major exchanges and wallets via API",
               "Supported CSV file upload for transaction import",
               "Created flexible forms matching each exchange's requirements",
               "Implemented master/sub account system for B2B use",
-              "Improved input UX with jQuery drag & drop"
+              "Improved input UX with jQuery drag-and-drop"
             ]
           }
         ]

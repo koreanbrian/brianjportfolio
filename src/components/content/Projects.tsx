@@ -123,7 +123,7 @@ export default function Projects() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.2 }}
                                 transition={{ duration: 0.6, delay: 0.1 * idx }}
-                                className="relative pl-[16px] text-[12px] before:content-['•'] before:absolute before:left-0 before:text-gray-500"
+                                className="text-[12px] relative  before:text-gray-500"
                               >
                                 {env}
                               </motion.div>
@@ -146,7 +146,7 @@ export default function Projects() {
                             >
                               <span className="block font-bold text-[16px]">{task.headTask}</span>
                               <div className="bg-gray-100 p-[8px]">
-                                <span className="font-bold">
+                                <span className="font-bold ">
                                   {t("mainPoint")}: <span className="font-normal">{task.mainPoint}</span>
                                 </span>
                                 <div className="flex flex-col gap-[4px] ml-[8px]">
@@ -157,7 +157,7 @@ export default function Projects() {
                                       whileInView={{ opacity: 1, y: 0 }}
                                       viewport={{ once: true, amount: 0.2 }}
                                       transition={{ duration: 0.6, delay: 0.2 * sIdx }}
-                                      className="relative pl-[16px] text-[12px] before:content-['•'] before:absolute before:left-0 before:text-gray-500"
+                                      className="text-[13px] relative  before:text-gray-500"
                                     >
                                       {sub}
                                     </motion.div>

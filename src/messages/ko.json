@@ -138,9 +138,9 @@
         "projectName": "포트폴리오 웹사이트 제작",
         "startDate": "2025.04",
         "endDate": "진행 중",
-        "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS", "AWS S3"],
+        "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
         "devEnvironment": [
-          "Next.js 기반 CSR 중심의 정적 포트폴리오 사이트 구현",
+          "Next.js with Typescript 기반 CSR 중심의 정적 포트폴리오 사이트 구현",
           "Tailwind CSS를 활용한 유틸리티 클래스 기반 반응형 UI 설계",
           "Framer Motion을 이용한 스크롤 연동 애니메이션 구성",
           "전체 뷰포트 기반의 수직/수평 scroll-snap 레이아웃 구성"
@@ -150,7 +150,6 @@
             "headTask": "포트폴리오 섹션 구성 및 UI 설계",
             "mainPoint": "직관적인 섹션 구성을 통한 사용자 경험 강화",
             "subTask": [
-              "'Intro', 'About', 'Skills', 'Projects', 'Career' 등 전체 화면 단위 섹션 구성",
               "scroll-snap 기능을 활용해 섹션 간 부드러운 전환 구현",
               "모바일, 태블릿, 데스크톱 디바이스 모두에서 반응형 레이아웃 유지",
               "컴포넌트 단위로 모듈화하여 유지보수 및 확장 용이성 확보"
@@ -161,7 +160,6 @@
             "mainPoint": "Framer Motion 기반의 부드러운 등장 애니메이션 구현",
             "subTask": [
               "섹션별로 Fade-In 및 요소별 딜레이를 조정한 등장 효과 구현",
-              "스크롤 위치에 따라 Header의 배경색 전환 (투명 ↔︎ bg-gray-100)",
               "Framer Motion `useAnimation`, `useInView` 등을 활용한 트리거 제어"
             ]
           },

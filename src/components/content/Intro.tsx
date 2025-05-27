@@ -39,8 +39,10 @@ export default function Intro() {
                 <AnimatePresence mode="wait">
                   {!showName ? (
                     <>
-                      <div className="flex gap-[4px]">
-                        <span className="font-light w-[60px] h-fit">{t("iAm")}</span>
+                      <div className="flex gap-[4px] items-center">
+                        <span className={`font-light w-[60px] ${locale === "ko" ? "text-[24px]" : "text-[16px]"}`}>
+                          {t("iAm")}
+                        </span>
                         <motion.div
                           key="engineer"
                           initial={{ opacity: 0, y: 10 }}
@@ -52,12 +54,16 @@ export default function Intro() {
                           <span className="font-semibold border-b border-b-black w-[270px] h-[35px] flex"></span>
                         </motion.div>
                       </div>
-                      <span className="font-light w-[60px] text-[25px] ">{t("end")}</span>
+                      <span className={`font-light w-[60px] ${locale === "ko" ? "text-[24px]" : "text-[16px]"}`}>
+                        {t("end")}
+                      </span>
                     </>
                   ) : (
                     <>
-                      <div className="flex gap-[4px]">
-                        <span className="font-light w-[60px] h-fit">{t("iAm")}</span>
+                      <div className="flex gap-[4px] items-center">
+                        <span className={`font-light w-[60px] ${locale === "ko" ? "text-[24px]" : "text-[16px]"}`}>
+                          {t("iAm")}
+                        </span>
                         <div className="w-fit flex gap-[4px] justify-start">
                           <span className="font-semibold border-b border-b-black w-[270px] h-[35px] flex text-center">
                             <motion.div
@@ -76,7 +82,7 @@ export default function Intro() {
                           </span>
                         </div>
                       </div>
-                      <span className="font-light w-[60px] text-[25px] ">{t("end")}</span>
+                      <span className="font-light w-[60px] text-[24px] ">{t("end")}</span>
                     </>
                   )}
                 </AnimatePresence>
