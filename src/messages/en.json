@@ -151,29 +151,34 @@
         "taskDesc": [
           {
             "headTask": "Section Layout & UI Design",
-            "mainPoint": "Improved user experience with an intuitive section layout",
+            "mainPoint": "Improved UX through an intuitive layout",
             "subTask": [
-              "Structured full-screen sections: 'Intro', 'About', 'Skills', 'Projects', 'Career'",
+              "Structured full-screen sections: Intro, About, Skills, Projects, Career",
               "Implemented smooth transitions between sections via scroll-snap",
-              "Maintained responsive design/layout across mobile, tablet, and desktop devices",
+              "Maintained responsive layout for mobile, tablet, and desktop",
               "Modularized components for scalability and maintenance"
             ]
           },
           {
-            "headTask": "Animations & Interactivity",
-            "mainPoint": "Implemented smooth entrance animations using Framer Motion",
+            "headTask": "Animations & Career Slide Interaction",
+            "mainPoint": "Built engaging user experience with scroll-based animations and timeline-style navigation",
             "subTask": [
-              "Used fade-in and staggered entrance effects per section",
-              "Dynamically changed header background color on scroll",
-              "Controlled animations via `useAnimation` and `useInView`"
+              "Used fade-in and staggered entrance animations with Framer Motion",
+              "Changed header background dynamically based on scroll position",
+              "Controlled animations with `useAnimation` and `useInView` from Framer Motion",
+              "Implemented horizontal scrolling with `scroll-snap-type: x mandatory`",
+              "Configured full-width slides using `100vw` for the Career section",
+              "Enhanced transitions and emphasized slide elements using Framer Motion"
             ]
           },
           {
-            "headTask": "Horizontal Slide (Career Section)",
-            "mainPoint": "Implemented timeline-like slides spanning full screen width",
+            "headTask": "i18n & Multilingual Support",
+            "mainPoint": "Enabled internationalization for English and Korean versions",
             "subTask": [
-              "Designed horizontal scrolling using `scroll-snap-type: x mandatory`",
-              "Applied smooth slide transitions and emphasized names using Framer Motion"
+              "Integrated `next-intl` to manage locale-based routing and translations",
+              "Created structured translation JSON files for both English and Korean",
+              "Localized all UI sections including menus, project descriptions, and metadata",
+              "Maintained fallback and error handling for unsupported locales"
             ]
           }
         ]

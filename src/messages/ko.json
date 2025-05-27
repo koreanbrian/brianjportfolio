@@ -147,29 +147,35 @@
         ],
         "taskDesc": [
           {
-            "headTask": "포트폴리오 섹션 구성 및 UI 설계",
-            "mainPoint": "직관적인 섹션 구성을 통한 사용자 경험 강화",
+            "headTask": "섹션 레이아웃 및 UI 설계",
+            "mainPoint": "직관적인 레이아웃을 통해 사용자 경험 개선",
             "subTask": [
-              "scroll-snap 기능을 활용해 섹션 간 부드러운 전환 구현",
-              "모바일, 태블릿, 데스크톱 디바이스 모두에서 반응형 레이아웃 유지",
-              "컴포넌트 단위로 모듈화하여 유지보수 및 확장 용이성 확보"
+              "Intro, About, Skills, Projects, Career 섹션을 전체 화면 구성으로 설계",
+              "scroll-snap을 활용해 섹션 간 부드러운 전환 구현",
+              "모바일, 태블릿, 데스크톱 환경에 맞춘 반응형 레이아웃 유지",
+              "유지 보수성과 확장성을 고려한 컴포넌트 모듈화"
             ]
           },
           {
-            "headTask": "인터랙션 및 애니메이션 효과",
-            "mainPoint": "Framer Motion 기반의 부드러운 등장 애니메이션 구현",
+            "headTask": "애니메이션 및 커리어 슬라이드 인터랙션",
+            "mainPoint": "스크롤 기반 애니메이션과 타임라인형 슬라이드로 역동적인 UX 구현",
             "subTask": [
-              "섹션별로 Fade-In 및 요소별 딜레이를 조정한 등장 효과 구현",
-              "Framer Motion `useAnimation`, `useInView` 등을 활용한 트리거 제어"
+              "Framer Motion을 활용한 페이드인 및 순차적 등장 애니메이션 적용",
+              "스크롤 위치에 따라 헤더 배경색 동적으로 변경",
+              "`useAnimation`, `useInView`를 활용한 애니메이션 트리거 제어",
+              "`scroll-snap-type: x mandatory` 속성을 이용한 가로 슬라이드 구현",
+              "Career 섹션을 위해 각 슬라이드를 `100vw`로 설정",
+              "Framer Motion을 활용해 부드러운 전환 및 강조 효과 추가"
             ]
           },
           {
-            "headTask": "가로 슬라이드 섹션 구현 (Career)",
-            "mainPoint": "화면 너비 단위의 슬라이드 구현을 통한 타임라인 표현",
+            "headTask": "i18n 및 다국어 지원",
+            "mainPoint": "영문·국문 사이트를 위한 다국어 지원 기능 구축",
             "subTask": [
-              "`scroll-snap-type: x mandatory`를 활용한 수평 스크롤 방식 설계",
-              "각 슬라이드를 `100vw`로 설정해 풀스크린 뷰 연출",
-              "Framer Motion을 통해 부드러운 이동 및 이름 강조 애니메이션 적용"
+              "`next-intl`을 적용해 다국어 라우팅 및 번역 관리 기능 구현",
+              "영어 및 한국어 번역을 위한 JSON 구조화",
+              "메뉴, 프로젝트 설명, 메타데이터 등 전 섹션에 로컬라이징 적용",
+              "지원되지 않는 언어에 대한 예외 처리 및 fallback 설정"
             ]
           }
         ]
