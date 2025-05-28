@@ -6,6 +6,7 @@
     "name": "Brian Jeong",
     "end": "",
     "phone": "📱",
+    "phoneNumInfo": "Ask more info via email",
     "email": "📧",
     "university": "University of Nevada, Las Vegas",
     "universityKorean": "",
@@ -39,6 +40,7 @@
   },
   "career": {
     "title": "Career",
+    "maintask": "Main Task",
     "jobs": [
       {
         "company": "Openformat [Incento]",

@@ -6,6 +6,7 @@
     "name": "정희영",
     "end": "입니다.",
     "phone": "📱",
+    "phoneNumInfo": "이메일로 문의해주세요",
     "email": "📧",
     "university": "University of Nevada, Las Vegas",
     "universityKorean": "네바다 주립대학교, 라스베가스 캠퍼스",
@@ -38,6 +39,7 @@
   },
   "career": {
     "title": "Careers",
+    "maintask": "주요 업무",
     "jobs": [
       {
         "company": "오픈포맷 [인센토]",

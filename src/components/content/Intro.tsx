@@ -91,14 +91,6 @@ export default function Intro() {
 
             <div className="w-full flex flex-col gap-[4px] text-[14px]">
               <div className="flex gap-[4px] w-full">
-                <span className="font-light w-[30px]">{t("phone")}</span>
-                <span className="w-full font-light">
-                  <a className="cryptedphone" data-name="+82 10" data-domain="5046" data-tld="5137">
-                    <i></i>
-                  </a>
-                </span>
-              </div>
-              <div className="flex gap-[4px] w-full">
                 <span className="font-light w-[30px]">{t("email")}</span>
                 <span className="w-full font-light">
                   <a
@@ -120,6 +112,15 @@ export default function Intro() {
                   >
                     <i className="fas fa-envelopes"></i>
                   </a>
+                </span>
+              </div>
+              <div className="flex gap-[4px] w-full">
+                <span className="font-light w-[30px]">{t("phone")}</span>
+                <span className="w-full font-light">
+                  {t("phoneNumInfo")}
+                  {/* <a className="cryptedphone" data-name="+82 10" data-domain="5046" data-tld="5137">
+                    <i></i>
+                  </a> */}
                 </span>
               </div>
             </div>

@@ -101,7 +101,7 @@ export default function Career() {
                     </div>
 
                     <div className="h-fit flex flex-col gap-[4px] py-[4px]">
-                      <div className="subject text-[12px] w-fit font-semibold">주요 업무</div>
+                      <div className="subject text-[12px] w-fit font-semibold">{t("maintask")}</div>
                       <div className="text-[14px] flex flex-col gap-[12px] border rounded-md px-[8px] py-[12px]">
                         {career.taskDesc.map((task: any, tIndex: number) => (
                           <motion.div
