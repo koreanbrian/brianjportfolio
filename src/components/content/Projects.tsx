@@ -100,6 +100,22 @@ export default function Projects() {
                         </div>
                       </div>
                     </div>
+                    <div className="w-fit flex flex-col gap-[4px]">
+                      <div className="w-full h-full max-h-[220px] items-start overflow-y-hidden flex justify-center">
+                        <img className="rounded-md" src={project.imgUrl} />
+                      </div>
+                      {project.url && (
+                        <div className="subject w-full flex   justify-end">
+                          <a
+                            className="font-semibold text-[12px] bg-black p-[4px] text-white rounded-md"
+                            href={project.url}
+                            target="_blank"
+                          >
+                            {t("urlSubject")}
+                          </a>
+                        </div>
+                      )}
+                    </div>
                     <div className="w-full h-fit flex flex-col mt-[4px] gap-[4px] py-[4px]">
                       <div className="subject text-[12px] w-fit font-semibold">{t("devEnvironment")}</div>
                       <div className="w-full flex flex-wrap gap-[4px] py-[4px]">

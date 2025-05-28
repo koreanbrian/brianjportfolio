@@ -132,6 +132,7 @@
   "projects": {
     "title": "Projects",
     "mainPoint": "주요기능",
+    "urlSubject": "링크 바로가기",
     "devEnvironment": "개발환경",
     "skillStacks": "사용 기술",
     "projects": [
@@ -140,6 +141,8 @@
         "projectName": "포트폴리오 웹사이트 제작",
         "startDate": "2025.04",
         "endDate": "진행 중",
+        "url": "https://brianjportfolio.vercel.app/",
+        "imgUrl": "/img/portfolio/folio_main.png",
         "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
         "devEnvironment": [
           "Next.js with Typescript 기반 CSR 중심의 정적 포트폴리오 사이트 구현",
@@ -187,6 +190,8 @@
         "projectName": "S사 리워드 제공 관리 사이트",
         "startDate": "2024.08",
         "endDate": "2025.05",
+        "url": "",
+        "imgUrl": "/img/portfolio/SPC_item_details.png",
         "skillStacks": [
           "Next.js with TypeScript",
           "React",
@@ -242,6 +247,8 @@
         "projectName": "인센토 리워드 마케팅 관리 사이트 리뉴얼",
         "startDate": "2024.11",
         "endDate": "2025.01",
+        "url": "https://dashboard.incento.kr/",
+        "imgUrl": "/img/portfolio/incento_dashboard.png",
         "skillStacks": ["MySQL", "Spring MVC", "Java", "JavaScript", "MyBatis", "Tomcat", "i18n"],
         "devEnvironment": [
           "PostgreSQL 기반 데이터 저장 및 관리 구조 최적화",
@@ -290,6 +297,8 @@
         "projectName": "B2B 가상자산 세금 계산 플랫폼",
         "startDate": "2022.06",
         "endDate": "2024.04",
+        "url": "https://ent.cxt.tax/main",
+        "imgUrl": "/img/portfolio/cxt_main.png",
         "skillStacks": ["MySQL", "Spring MVC", "Java", "JavaScript", "MyBatis", "Tomcat", "i18n"],
         "devEnvironment": [
           "MySQL, MongoDB를 병행하여, 대량의 정형/비정형 데이터를 안정적으로 관리",

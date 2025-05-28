@@ -135,6 +135,7 @@
   "projects": {
     "title": "Projects",
     "mainPoint": "Main Point",
+    "urlSubject": "Clik to website",
     "devEnvironment": "Development Environment",
     "skillStacks": "Skill Stacks",
     "projects": [
@@ -143,6 +144,8 @@
         "projectName": "Portfolio Website Development",
         "startDate": "2025.04",
         "endDate": "Ongoing",
+        "url": "https://brianjportfolio.vercel.app/",
+        "imgUrl": "/img/portfolio/folio_main.png",
         "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
         "devEnvironment": [
           "Implemented a static CSR-focused portfolio site using Next.js with TypeScript",
@@ -190,6 +193,8 @@
         "projectName": "S-Company Reward Management Site",
         "startDate": "2024.08",
         "endDate": "2025.05",
+        "url": "",
+        "imgUrl": "/img/portfolio/SPC_item_details.png",
         "skillStacks": [
           "Next.js with TypeScript",
           "React",
@@ -245,6 +250,8 @@
         "projectName": "Incento Admin Site Renewal",
         "startDate": "2024.11",
         "endDate": "2025.01",
+        "url": "https://dashboard.incento.kr/",
+        "imgUrl": "/img/portfolio/incento_dashboard.png",
         "skillStacks": ["MySQL", "Spring MVC", "Java", "JavaScript", "MyBatis", "Tomcat", "i18n"],
         "devEnvironment": [
           "Optimized data management using PostgreSQL",
@@ -293,6 +300,9 @@
         "projectName": "B2B CryptoTax Calculation Platform",
         "startDate": "2022.06",
         "endDate": "2024.04",
+        "url": "https://ent.cxt.tax/main",
+        "imgUrl": "/img/portfolio/cxt_main.png",
+
         "skillStacks": ["MySQL", "Spring MVC", "Java", "JavaScript", "MyBatis", "Tomcat", "i18n"],
         "devEnvironment": [
           "Managed large volumes of structured and unstructured data using MySQL and MongoDB",
