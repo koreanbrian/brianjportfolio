@@ -52,7 +52,7 @@
             "headTask": "Project Leadership & Planning",
             "subTask": [
               "Led frontend & UI/UX renewal of Cafe24 referral plugin 'Incento' with 10 multinational team members",
-              "Planned and redesigned the Incent admin site to improve usability and operational efficiency",
+              "Planned and redesigned the Incento admin site to improve usability and operational efficiency",
               "Designed business logic and improved service architecture based on user needs"
             ]
           },
@@ -143,7 +143,7 @@
         "company": "Personal Project (Solo)",
         "projectName": "Portfolio Website Development",
         "startDate": "2025.04",
-        "endDate": "Ongoing",
+        "endDate": "2025.05",
         "url": "https://brianjportfolio.vercel.app/",
         "imgUrl": "/img/portfolio/folio_main.png",
         "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
