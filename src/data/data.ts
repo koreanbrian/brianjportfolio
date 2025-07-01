@@ -253,7 +253,7 @@ export const careerInfo: JobDesc[] = [
       {
         headTask: "프론트엔드 개발 & UI 구현",
         subTask: [
-          "HTML, CSS, JavaScript, jQuery를 활용한 사용자 친화적 뷰 페이지 개발",
+          "HTML5/CSS3, JavaScript, jQuery를 활용한 사용자 친화적 뷰 페이지 개발",
           "i18n을 활용한 다국어 웹사이트 구축 및 한글 사이트 영문 번역",
         ],
       },
