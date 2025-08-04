@@ -51,26 +51,26 @@
           {
             "headTask": "Project Leadership & Planning",
             "subTask": [
-              "Led frontend & UI/UX renewal of Cafe24 referral plugin 'Incento' with 10 multinational team members",
-              "Planned and redesigned the Incento admin site to improve usability and operational efficiency",
-              "Designed business logic and improved service architecture based on user needs"
+              "Led the frontend renewal of Cafe24’s referral plugin 'Incento', collaborating with a 10-member multinational team",
+              "Planned and redesigned the Incento Admin Site to enhance usability and operational efficiency",
+              "Defined business logic and restructured service architecture based on evolving user requirements"
             ]
           },
           {
-            "headTask": "Frontend Development & UI/UX Improvements",
+            "headTask": "Frontend Development & UI/UX Enhancements",
             "subTask": [
-              "Built responsive web design optimized for various devices",
-              "Improved data visualization and clarity through intuitive dashboards and simplified workflows",
-              "Developed reusable component architecture using  Next.js with TypeScript and Tailwind CSS",
-              "Optimized styling using Tailwind CSS with consistent design system"
+              "Developed responsive web applications optimized for cross-device compatibility",
+              "Enhanced data visualization and improved clarity through intuitive dashboards and streamlined workflows",
+              "Architected reusable components using Next.js with TypeScript and Tailwind CSS",
+              "Established a consistent design system and optimized styling for maintainability"
             ]
           },
           {
             "headTask": "Data Handling & Deployment Infrastructure",
             "subTask": [
-              "Visualized dashboard data using Chart.js and nivo",
-              "Managed data with PostgreSQL and handled secure files with AWS S3/CloudFront",
-              "Deployed stable, scalable infrastructure using Vercel"
+              "Visualized complex campaign metrics using Chart.js and Nivo for interactive dashboards",
+              "Managed relational data with PostgreSQL and secured file handling via AWS S3 and CloudFront",
+              "Deployed stable, scalable frontend infrastructure on Vercel"
             ]
           }
         ]
@@ -84,21 +84,23 @@
           {
             "headTask": "Service Development & Architecture",
             "subTask": [
-              "Developed cryptocurrency asset management service 'CryptoTax' using Spring MVC and Tomcat",
-              "Managed data using MySQL, MongoDB, and MyBatis",
-              "Integrated APIs from major cryptocurrency exchanges and implemented backend logic"
+              "Developed the cryptocurrency asset management platform 'CryptoTax' using Spring MVC and Tomcat",
+              "Designed and managed data handling with MySQL, MongoDB, and MyBatis",
+              "Integrated APIs from major cryptocurrency exchanges and implemented backend business logic for automated asset retrieval and tax calculations"
             ]
           },
           {
             "headTask": "Frontend Development & UI",
             "subTask": [
-              "Developed user-friendly views using HTML, CSS, JavaScript, and jQuery",
-              "Built a multilingual website using i18n and translated the Korean version into English"
+              "Implemented user-friendly web interfaces using HTML, CSS, JavaScript, and jQuery",
+              "Developed a multilingual website with i18n and translated the Korean version into English to support global users"
             ]
           },
           {
             "headTask": "Data & Cloud Infrastructure",
-            "subTask": ["Operated secure, efficient file storage and deployment using AWS S3/CloudFront"]
+            "subTask": [
+              "Configured secure file storage and static asset delivery using AWS S3 and CloudFront for scalable deployment"
+            ]
           }
         ]
       },
@@ -111,21 +113,21 @@
           {
             "headTask": "UX/UI Design & Planning",
             "subTask": [
-              "Designed mobile UX/UI flows using Figma",
-              "Created UX design maps and wireframes for services like pet hospitals, hotels, stores, and pools"
+              "Designed intuitive mobile UX/UI flows using Figma",
+              "Created detailed UX design maps and high-fidelity wireframes for services such as pet hospitals, hotels, stores, and swimming pools"
             ]
           },
           {
             "headTask": "Website Development & Implementation",
             "subTask": [
-              "Built websites and booking systems using HTML5, CSS, and Spring MVC",
-              "Delivered optimized UI across various devices through responsive design"
+              "Developed responsive websites and booking systems using HTML5, CSS, and Spring MVC",
+              "Optimized UI layouts to ensure consistent user experience across multiple devices and screen sizes"
             ]
           },
           {
-            "headTask": "Data Integration & System Building",
+            "headTask": "Data Integration & System Architecture",
             "subTask": [
-              "Designed and implemented system and mapping structure for linking membership data across services"
+              "Designed and implemented a system architecture with data mapping to integrate membership information across different pet services"
             ]
           }
         ]
@@ -148,42 +150,42 @@
         "imgUrl": "/img/portfolio/folio_main.png",
         "skillStacks": ["Next.js with TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
         "devEnvironment": [
-          "Implemented a static CSR-focused portfolio site using Next.js with TypeScript",
-          "Designed a responsive UI using Tailwind CSS",
-          "Implemented scroll-triggered animations using Framer Motion",
-          "Built a full-viewport vertical/horizontal scroll-snap layout"
+          "Developed a static, CSR-focused portfolio website using Next.js and TypeScript",
+          "Designed a fully responsive UI leveraging Tailwind CSS for consistent styling",
+          "Integrated scroll-triggered animations powered by Framer Motion",
+          "Created a full-viewport vertical and horizontal scroll-snap layout for seamless navigation"
         ],
         "taskDesc": [
           {
             "headTask": "Section Layout & UI Design",
-            "mainPoint": "Improved UX through an intuitive layout",
+            "mainPoint": "Enhanced UX with an intuitive and responsive section-based layout",
             "subTask": [
-              "Structured full-screen sections: Intro, About, Skills, Projects, Career",
-              "Implemented smooth transitions between sections via scroll-snap",
-              "Maintained responsive layout for mobile, tablet, and desktop",
-              "Modularized components for scalability and maintenance"
+              "Structured full-screen sections including Intro, About, Skills, Projects, and Career",
+              "Implemented smooth transitions between sections using CSS scroll-snap",
+              "Optimized layouts for mobile, tablet, and desktop responsiveness",
+              "Modularized UI components to improve scalability and maintainability"
             ]
           },
           {
             "headTask": "Animations & Career Slide Interaction",
-            "mainPoint": "Built engaging user experience with scroll-based animations and timeline-style navigation",
+            "mainPoint": "Delivered engaging interactions with scroll-based animations and timeline-style slides",
             "subTask": [
-              "Used fade-in and staggered entrance animations with Framer Motion",
-              "Changed header background dynamically based on scroll position",
-              "Controlled animations with `useAnimation` and `useInView` from Framer Motion",
-              "Implemented horizontal scrolling with `scroll-snap-type: x mandatory`",
-              "Configured full-width slides using `100vw` for the Career section",
-              "Enhanced transitions and emphasized slide elements using Framer Motion"
+              "Applied fade-in effects and staggered animations using Framer Motion",
+              "Dynamically changed header background based on scroll position",
+              "Controlled animation states with Framer Motion’s `useAnimation` and `useInView` hooks",
+              "Implemented horizontal scrolling with `scroll-snap-type: x mandatory` for Career slides",
+              "Configured full-width slides using `100vw` for consistent viewport coverage",
+              "Enhanced transitions and emphasized slide elements using advanced motion effects"
             ]
           },
           {
             "headTask": "i18n & Multilingual Support",
-            "mainPoint": "Enabled internationalization for English and Korean versions",
+            "mainPoint": "Implemented multilingual support with locale-based routing and translations",
             "subTask": [
-              "Integrated `next-intl` to manage locale-based routing and translations",
-              "Created structured translation JSON files for both English and Korean",
+              "Integrated `next-intl` to manage language routing and translation handling",
+              "Created structured JSON translation files for English and Korean",
               "Localized all UI sections including menus, project descriptions, and metadata",
-              "Maintained fallback and error handling for unsupported locales"
+              "Implemented robust fallback logic and error handling for unsupported locales"
             ]
           }
         ]
@@ -206,41 +208,41 @@
           "CloudFront"
         ],
         "devEnvironment": [
-          "Managed data with PostgreSQL",
-          "Implemented cloud-based file storage using AWS S3 and CloudFront",
-          "Deployed frontend on Vercel",
-          "Applied consistent styling via Tailwind CSS",
-          "Developed dashboards using Chart.js and nivo to visualize key performance metrics"
+          "Designed and managed relational data storage using PostgreSQL",
+          "Implemented cloud-based file handling with AWS S3 and CDN delivery via CloudFront",
+          "Deployed the frontend application on Vercel for scalable and reliable hosting",
+          "Applied consistent and responsive styling using Tailwind CSS",
+          "Developed interactive dashboards leveraging Chart.js and Nivo for KPI visualization"
         ],
         "taskDesc": [
           {
             "headTask": "Campaign & Referral Item Configuration",
-            "mainPoint": "Automated campaign and referral settings",
+            "mainPoint": "Automated campaign and referral configuration workflows",
             "subTask": [
-              "Built a structured UI for setting up referral campaigns (target audience, reward trigger, deadlines, reward method, limits, etc.)",
-              "Designed a structure to separate referrer and referee reward settings",
-              "Returned the configuration values in JSON format for API integration",
-              "Supported flexible reward designs based on various payout conditions"
+              "Developed a structured UI for defining referral campaign parameters (target audience, triggers, deadlines, payout methods, limits)",
+              "Implemented a configuration system differentiating referrer and referee reward logic",
+              "Returned campaign settings as JSON for seamless API communication",
+              "Supported dynamic and flexible reward structures to handle diverse payout conditions"
             ]
           },
           {
             "headTask": "Dashboard & Reporting",
-            "mainPoint": "Visualize key campaign reports",
+            "mainPoint": "Built analytics dashboards to visualize campaign performance",
             "subTask": [
-              "Visualized referral funnel, time-based traffic trends, and top referrers using Chart.js and nivo",
-              "Provided a dashboard for quick overview of user journeys and key KPIs",
-              "Implemented CSV download feature for tables and charts",
-              "Designed reusable component architecture to improve maintainability"
+              "Implemented visual reports for referral funnels, traffic trends, and top referrers using Chart.js and Nivo",
+              "Created a dashboard for a high-level overview of user journeys and KPIs",
+              "Added CSV export functionality for charts and tabular data",
+              "Designed reusable component architecture for scalability and maintainability"
             ]
           },
           {
             "headTask": "Reward History Management",
-            "mainPoint": "Manage referral payouts per campaign",
+            "mainPoint": "Enabled efficient administration and tracking of campaign payouts",
             "subTask": [
-              "Enabled campaign-based reward history view from the admin page",
-              "Added search by referrer/referee ID",
-              "Supported manual payout or cancellation based on reward status",
-              "Displayed reward info in a table format for readability"
+              "Developed an admin interface to display reward history filtered by campaign",
+              "Added search and filter capabilities for referrer/referee IDs",
+              "Implemented manual payout and cancellation workflows based on reward statuses",
+              "Displayed reward data in structured, readable table formats for improved usability"
             ]
           }
         ]
@@ -252,7 +254,16 @@
         "endDate": "2025.01",
         "url": "https://dashboard.incento.kr/",
         "imgUrl": "/img/portfolio/incento_dashboard.png",
-        "skillStacks": ["MySQL", "Spring MVC", "Java", "JavaScript", "MyBatis", "Tomcat", "i18n"],
+        "skillStacks": [
+          "Next.js with TypeScript",
+          "React",
+          "PostgreSQL",
+          "Tailwind CSS",
+          "Chart.js",
+          "nivo",
+          "AWS S3",
+          "CloudFront"
+        ],
         "devEnvironment": [
           "Optimized data management using PostgreSQL",
           "Built efficient static file distribution structure using AWS S3 and CloudFront",
@@ -302,47 +313,45 @@
         "endDate": "2024.04",
         "url": "https://ent.cxt.tax/main",
         "imgUrl": "/img/portfolio/cxt_main.png",
-
         "skillStacks": ["MySQL", "Spring MVC", "Java", "JavaScript", "MyBatis", "Tomcat", "i18n"],
         "devEnvironment": [
-          "Managed large volumes of structured and unstructured data using MySQL and MongoDB",
-          "Built secure and efficient file upload/download system using AWS S3, CloudFront, and Lambda",
-          "Designed backend with Java Spring MVC framework",
-          "Implemented multi-language (Korean/English) support using i18n",
-          "Developed enterprise cryptocurrency tax management system for B2B clients",
-          "Deployed with Apache Tomcat"
+          "Designed and managed large-scale structured and unstructured data using MySQL and MongoDB",
+          "Implemented a secure and efficient file upload/download system utilizing AWS S3, CloudFront, and Lambda",
+          "Developed backend services with Java Spring MVC and deployed using Apache Tomcat",
+          "Implemented multilingual (Korean/English) support with i18n",
+          "Built an enterprise-level cryptocurrency tax management system tailored for B2B clients"
         ],
         "taskDesc": [
           {
-            "headTask": "UX/UI Planning",
-            "mainPoint": "Implemented exchange-integrated dashboard",
+            "headTask": "UX/UI Dashboard Development",
+            "mainPoint": "Created an exchange-integrated dashboard for comprehensive asset tracking",
             "subTask": [
-              "Aggregated data from Korea’s top 5 exchanges",
-              "Visualized daily metrics at midnight for user convenience",
-              "Used Ajax for async loading and speed optimization",
-              "Utilized Google Charts for visualizing new/existing data",
-              "Clearly presented asset and transaction statistics per cryptocurrency"
+              "Aggregated and synchronized transaction data from Korea’s top 5 cryptocurrency exchanges",
+              "Implemented automated daily metric visualization with scheduled midnight updates",
+              "Optimized page load times using asynchronous data loading with Ajax",
+              "Leveraged Google Charts for real-time visualization of asset and transaction statistics",
+              "Enhanced UX by clearly presenting per-cryptocurrency metrics and portfolio overviews"
             ]
           },
           {
             "headTask": "Document Automation",
-            "mainPoint": "Auto-generated tax documents",
+            "mainPoint": "Automated generation of critical tax documents",
             "subTask": [
-              "Generated key tax documents in-browser (balance sheets, P&L, gain/loss reports, certificates, etc.)",
-              "Improved usability with dedicated layouts per document type",
-              "Enhanced readability with clean, structured UI",
-              "Enabled export as PDF and Excel for convenience"
+              "Developed in-browser generation of financial documents including balance sheets, P&L statements, gain/loss reports, and certificates",
+              "Created dedicated, user-friendly layouts tailored to each document type",
+              "Improved document readability with structured UI design",
+              "Enabled one-click export functionality to PDF and Excel formats for client convenience"
             ]
           },
           {
-            "headTask": "Cryptocurrency Integration",
-            "mainPoint": "Supported API and file-based transaction sync",
+            "headTask": "Cryptocurrency API & File Integration",
+            "mainPoint": "Implemented flexible transaction synchronization for B2B enterprise clients",
             "subTask": [
-              "Synced with major exchanges and wallets via API",
-              "Supported CSV file upload for transaction import",
-              "Created flexible forms matching each exchange's requirements",
-              "Implemented master/sub account system for B2B use",
-              "Improved input UX with jQuery drag-and-drop"
+              "Integrated APIs with major cryptocurrency exchanges and wallets for real-time transaction syncing",
+              "Added CSV file upload support for manual transaction imports",
+              "Developed flexible form handling to accommodate various exchange-specific requirements",
+              "Implemented master/sub account system to support multi-account enterprise structures",
+              "Enhanced data input UX with intuitive drag-and-drop functionality using jQuery"
             ]
           }
         ]
